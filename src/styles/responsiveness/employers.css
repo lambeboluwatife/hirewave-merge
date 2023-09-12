@@ -1,0 +1,246 @@
+/* Tablets and under */
+@media all and (max-width: 768px) {
+  .employers-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .employers-card:last-child {
+    display: block;
+    position: relative;
+    left: 12rem;
+  }
+
+  .hiring-experience {
+    margin-top: 70rem;
+  }
+
+  .experience-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .experience-image .svg-box {
+    width: 250px;
+    height: 150px;
+  }
+
+  .experience-image img {
+    width: 215px;
+    height: 130px;
+    right: 3.3rem;
+  }
+
+  .experience-image .svg-rectangle {
+    width: 280px;
+    top: 9rem;
+    right: 21px;
+  }
+
+  .story {
+    padding: 2rem 0;
+    margin-left: 3rem;
+  }
+
+  .story svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  input {
+    width: 300px;
+  }
+}
+
+/* Mobile */
+@media all and (max-width: 500px) {
+  .employers-jumbotron {
+    height: 35vh;
+    position: static;
+    z-index: unset;
+  }
+
+  .employers-jumbotron h2 {
+    font-size: large;
+  }
+
+  .employers-card {
+    width: 300px;
+  }
+
+  .employers-cards {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 5rem;
+  }
+
+  .employers-card h3 {
+    padding: 1rem 0;
+  }
+
+  .employers-card .btn {
+    margin: 1rem 0;
+  }
+
+  .employers-card:last-child {
+    position: static;
+  }
+
+  .hiring-experience {
+    margin-top: 95rem;
+  }
+
+  .experience-data {
+    grid-template-columns: repeat(1, 1fr);
+    flex-direction: row-reverse;
+  }
+
+  .experience-image {
+    text-align: center;
+    margin: 0 0 2rem 4rem;
+  }
+
+  .experience-content {
+    text-align: center;
+  }
+
+  .notes {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+
+  .note {
+    display: block;
+  }
+
+  .author {
+    display: flex;
+    margin: 0;
+    padding: 1rem 0 2rem 0;
+    align-items: center;
+  }
+
+  .author-image {
+    margin-right: 1rem;
+  }
+
+  .author h3 {
+    font-size: medium;
+  }
+
+  .author h6 {
+    font-size: small;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .story {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .story svg {
+    display: none;
+  }
+
+  .story h3 {
+    padding-bottom: 1rem;
+  }
+
+  .post-job {
+    display: none;
+  }
+
+  .post-job-notice {
+    display: block;
+  }
+}
+
+/* Mobile */
+@media all and (max-width: 320px) {
+  .employers-jumbotron {
+    height: 40vh;
+  }
+
+  .employers-card {
+    width: 281px;
+    margin-top: 4rem;
+  }
+
+  .employers-card h3 {
+    font-size: large;
+    padding: 1rem 0 0 0;
+  }
+
+  .employers-card h2 {
+    font-size: medium;
+  }
+
+  .employers-card .line {
+    border: 1px solid #6d6d6d;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+  }
+
+  .employers-card .features {
+    padding-left: 0;
+  }
+
+  .employers-card .features .mark {
+    font-size: 12px;
+  }
+
+  .employers-card .btn {
+    margin: 1rem 0 2rem 0;
+  }
+
+  .hiring-experience {
+    margin-top: 90rem;
+  }
+
+  .experience-image .svg-box {
+    width: 230px;
+    height: 130px;
+  }
+
+  .experience-image img {
+    width: 185px;
+    height: 115px;
+    right: 3.6rem;
+  }
+
+  .experience-image .svg-rectangle {
+    width: 250px;
+    top: 7.8rem;
+    right: 26px;
+  }
+
+  .notes {
+    height: 95vh;
+    margin-bottom: 0;
+  }
+
+  .author-image {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+  }
+
+  .author h6 {
+    font-size: x-small;
+  }
+
+  .story h3 {
+    font-size: medium;
+  }
+
+  .story h6 {
+    font-size: small;
+  }
+}

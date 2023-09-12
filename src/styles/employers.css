@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Nunito:wght@300&family=Open+Sans:wght@800&display=swap");
+
+.jumbotron-wrapper {
+  position: relative;
+}
+
+.employers-jumbotron {
+  height: 32vh;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.employers-jumbotron h2 {
+  color: #eaf6ff;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.28px;
+}
+
+.employers-jumbotron h6 {
+  color: rgba(234, 246, 255, 0.7);
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: small;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: 1rem;
+}
+
+.employers-cards {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  top: 7rem;
+  left: 4rem;
+  right: 4rem;
+}
+
+.employers-card {
+  border-radius: 10px;
+  background: #fafafa;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  width: 350px;
+  margin: 2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.employers-card h3 {
+  color: #6d6d6d;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 2rem 0 1rem 0;
+}
+
+.employers-card h2 {
+  color: #4d73f8;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.28px;
+  display: inline;
+}
+
+.employers-card span {
+  color: #6d6d6d;
+  font-family: "Nunito", sans-serif;
+  font-size: small;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.employers-card .line {
+  border: 1px solid #6d6d6d;
+  margin: 1rem 2rem 2rem 2rem;
+}
+
+.employers-card .features {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  padding-bottom: 1rem;
+}
+
+.employers-card .features .mark {
+  color: #6d6d6d;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.employers-card .features .mark.cancel {
+  color: rgba(109, 109, 109, 0.4);
+  text-decoration-line: strikethrough;
+}
+
+.employers-card .features img {
+  padding: 0 1rem 0 1rem;
+  width: 50px;
+}
+
+.employers-card .btn {
+  margin: 3rem 0 2rem 0;
+}
+
+.hiring-experience {
+  margin-top: 35rem;
+}
+
+.hiring-experience h2 {
+  color: #020c18;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.28px;
+  text-align: center;
+}
+
+.experience-box {
+  margin-top: 2rem;
+}
+
+.experience-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 8rem 3rem 8rem;
+}
+
+.experience-data.reverse {
+  flex-direction: row-reverse;
+}
+
+.experience-content h4 {
+  color: #020c18;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.experience-content h6 {
+  color: #6d6d6d;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-size: small;
+  font-weight: 400;
+  line-height: normal;
+  white-space: pre-wrap;
+  padding-top: 1rem;
+}
+
+.experience-image {
+  position: relative;
+}
+
+.experience-image .svg-box {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  height: 200px;
+  right: 2.2rem;
+}
+
+.experience-image img {
+  width: 280px;
+  height: 180px;
+  position: absolute;
+  z-index: 2;
+  right: 2.8rem;
+  top: 0.6rem;
+}
+
+.experience-image .svg-rectangle {
+  position: absolute;
+  z-index: 3;
+  width: 350px;
+  top: 12rem;
+  right: 12px;
+}
+
+.notes {
+  height: 50vh;
+  background: #fafafa;
+  margin: 4rem 0 5rem 0;
+}
+
+.note {
+  display: flex;
+}
+
+.author {
+  text-align: center;
+  margin: 0 1rem 0 3rem;
+  padding: 4rem 0 4rem 0;
+}
+
+.author-image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.author h3 {
+  color: #020c18;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 0.6rem 0 0.2rem 0;
+}
+
+.author h6 {
+  color: #6d6d6d;
+  font-family: Nunito;
+  font-size: smaller;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.divider {
+  height: 50vh;
+  width: 0.5px;
+  background-color: #000;
+  margin-left: 3rem;
+}
+
+.story {
+  margin-left: 5rem;
+  padding: 3rem 0;
+}
+
+.story svg {
+  width: 44px;
+  height: 44px;
+}
+
+.story h3 {
+  color: #020c18;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-top: 1rem;
+}
+
+.story h6 {
+  color: #6d6d6d;
+  font-family: "Nunito", sans-serif;
+  font-size: small;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 0.2rem 0 1rem 0;
+}
+
+.story a {
+  text-decoration-line: underline;
+  color: #4d73f8;
+  font-family: "Nunito", sans-serif;
+  font-size: small;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  text-decoration-line: underline;
+}
+
+.post-job {
+  border-radius: 10px;
+  border: 0.5px solid #000;
+  padding: 3rem;
+  margin-bottom: 5rem;
+}
+
+.post-job h2 {
+  color: #4d73f8;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -1.28px;
+}
+
+.post-job h6 {
+  color: #6d6d6d;
+  font-family: "Nunito", sans-serif;
+  font-size: small;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.post-job h3 {
+  color: #020c18;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 2rem 0 0.5rem 0;
+}
+
+.post-job hr {
+  background: #b6b6b6;
+}
+
+.input-box h4 {
+  color: #6d6d6d;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
+}
+
+.input-box sup {
+  color: red;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(52, 6, 179, 0.1);
+  background: #fff;
+  font-family: "Nunito", sans-serif;
+  width: 450px;
+  height: 56px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4d73f8;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.input-box span {
+  color: #6d6d6d;
+  font-family: "Nunito", sans-serif;
+  font-size: smaller;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 0.5rem;
+}
+
+textarea {
+  height: 112px;
+  width: 100%;
+}
+
+form button {
+  margin-top: 1rem;
+}
+
+.post-job-notice {
+  background: #4d73f8;
+  height: 10vh;
+  padding: 1rem;
+  margin: 2rem 0;
+  display: none;
+}
+
+.post-job-notice h2 {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
