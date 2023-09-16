@@ -45,7 +45,7 @@ const FAQ = ({ faqs, toggle, selected, faqContent }) => {
               </span>
               . Find the <span>perfect match</span> for your hiring needs.{" "}
             </h6>
-            <Link to="/jobs">
+            <Link to="/employers">
               <button className="btn3">Post A Job</button>
             </Link>
           </div>
