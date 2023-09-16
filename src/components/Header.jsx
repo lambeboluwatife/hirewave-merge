@@ -2,7 +2,7 @@ import { faBars, faRemove } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router-dom";
 
-const Header = ({ dropdown, toggleDropdown }) => {
+const Header = ({ dropdown, toggleDropdown, loggedIn, userName }) => {
   const location = useLocation();
   const hideHeaderForPaths = ["/sign-in", "/sign-up"];
 
@@ -59,12 +59,18 @@ const Header = ({ dropdown, toggleDropdown }) => {
           </ul>
         </nav>
         <div className="header-btn">
-          <Link className="login-btn" to="/sign-in">
-            Log in
-          </Link>
-          <Link to="/sign-up">
-            <button className="btn">Sign up</button>
-          </Link>
+          {loggedIn ? (
+            <div className="loggedUser">{`Signed In as ${userName}`}</div>
+          ) : (
+            <>
+              <Link className="login-btn" to="/sign-in">
+                Log in
+              </Link>
+              <Link to="/sign-up">
+                <button className="btn">Sign up</button>
+              </Link>
+            </>
+          )}
         </div>
         <FontAwesomeIcon
           icon={dropdown ? faRemove : faBars}
@@ -89,10 +95,10 @@ const Header = ({ dropdown, toggleDropdown }) => {
               <Link to="/support">Support</Link>
             </li>
           </ul>
-          <Link className="cta2" to="/login">
+          <Link className="cta2" to="/sign-in">
             <button>Log in</button>
           </Link>
-          <Link to="/" className="cta">
+          <Link to="/sign-up" className="cta">
             <button>Sign up</button>
           </Link>
         </div>

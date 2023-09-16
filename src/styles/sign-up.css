@@ -17,13 +17,13 @@
 }
 
 .sign-in-details {
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   width: 50%;
 }
 
 .toggle-user {
   overflow: hidden;
-  border: 1px solid #4d73f8;
+  /* border: 1px solid #4d73f8; */
   border-radius: 10px;
   display: flex;
   justify-content: space-evenly;
@@ -34,6 +34,7 @@
   padding: 1rem;
   font-family: "Open Sans", sans-serif;
   width: 10rem;
+  display: none;
 }
 
 .toggle-user .job-seeker {
@@ -98,6 +99,7 @@ form button {
   height: 50px;
   border: none;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .sign-in-details h6 a {

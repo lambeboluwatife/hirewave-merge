@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Nunito:wght@300&family=Open+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Nunito:wght@300&family=Ultra&family=Kanit&family=Open+Sans:wght@600&display=swap");
 
 :root {
   --primary-color: #4d73f8;
@@ -68,6 +68,19 @@ header .login-btn {
 header .login-btn:hover {
   color: var(--primary-color);
   font-weight: 900;
+}
+
+.loggedUser {
+  background: #4d73f8;
+  padding: 1rem;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.loggedUser:hover {
+  background: transparent;
+  color: #1b0065;
+  border: 1px solid #1b0065;
 }
 
 header .menu-bar {
@@ -695,6 +708,38 @@ header .menu-bar {
 .faq-jumbo .content h6 span {
   font-weight: 700;
   color: #fff;
+}
+
+.not-found {
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: 15rem;
+  font-family: "Ultra", serif;
+  color: #1b0065;
+}
+
+.not-found h3 {
+  font-family: "Kanit" sans-serif;
+  margin-top: 1rem;
+}
+
+.not-found h6 {
+  font-family: "Nunito", sans-serif;
+  font-size: small;
+  color: #6d6d6d;
+  margin: 1rem 0;
+}
+
+.not-found .button {
+  font-size: x-small;
+  font-family: "Open Sans" sans-serif;
+  margin-bottom: 3rem;
+}
+
+.not-found button {
+  margin: 0 2rem;
 }
 
 footer {

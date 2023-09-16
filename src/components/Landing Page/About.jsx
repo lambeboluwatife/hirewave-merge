@@ -35,7 +35,7 @@ const About = () => {
           <Link to="#services">
             <button className="btn">Learn more</button>
           </Link>
-          <Link to="/post-job">
+          <Link to="/employers">
             <button className="btn2">Post A Job</button>
           </Link>
         </div>
