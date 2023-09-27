@@ -19,6 +19,7 @@ import { useLiveQuery } from "dexie-react-hooks";
 
 import Notifications from "./Notifications";
 import NotFound from "./components/NotFound";
+import SignUpModal from "./components/SignUpModal";
 
 const App = () => {
   const navigate = useNavigate();
@@ -31,9 +32,14 @@ const App = () => {
   const [userName, setUserName] = useState("");
 
   const [dropdown, setDropdown] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const toggleDropdown = () => {
     setDropdown(!dropdown);
+  };
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
   };
 
   const jobs = useLiveQuery(() => db.jobs.toArray());
