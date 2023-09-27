@@ -117,17 +117,15 @@ const SignIn = ({ onLogin }) => {
               <div className="content-container">
                 <div className="container">
                   <h3>
-                    YOUR JOURNEY BEGINS <br /> HERE!
+                    WELCOME <br /> EMPLOYERS!
                   </h3>
                   <hr />
                   <h6>
-                    Where innovation meets impact, and your <br /> aspirations
-                    meet achievements.
+                    Join our platform to unlock a world of talent and
+                    opportunity. Sign up now to access a pool of skilled
+                    professionals and streamline your hiring process.
                   </h6>
-                  <h6>
-                    Ready to shape your future with us? Let’s take <br /> the
-                    first step together.
-                  </h6>
+                  <h6>Take the first step towards building your dream team!</h6>
 
                   <h4>Already have an account?</h4>
                   <div className="link">
