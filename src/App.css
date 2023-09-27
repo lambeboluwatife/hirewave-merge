@@ -59,14 +59,16 @@ header .login-btn {
   display: inline-block;
   padding: 0px 20px;
   font-family: "Nunito", sans-serif;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: 150%;
-  color: rgba(9, 0, 32, 0.7);
+  color: var(--primary-color);
+  border: none;
+  background: transparent;
 }
 
 header .login-btn:hover {
-  color: var(--primary-color);
+  color: var(--tertiary-color);
   font-weight: 900;
 }
 
@@ -174,17 +176,12 @@ header .menu-bar {
   justify-content: center;
   background-color: var(--primary-color);
   padding: 10px;
+  border: none;
+  color: #fff;
 }
 
 .dropdown-menu .cta2 {
   background-color: #1b0065;
-}
-
-.cta button,
-.cta2 button {
-  background: none;
-  border: none;
-  color: #fff;
 }
 
 .cta:hover {
