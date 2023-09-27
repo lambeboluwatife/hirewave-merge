@@ -3,11 +3,15 @@
 
 .sign-in {
   height: 100vh;
-  background: url("/Frame 339.jpg") no-repeat right;
+}
+
+.sign-in .grid {
+  gap: 0;
 }
 
 .sign-in .logo {
   margin-top: 1rem;
+  margin-left: 3.5rem;
   font-size: x-large;
 }
 
@@ -18,34 +22,7 @@
 
 .sign-in-details {
   padding: 2rem 1rem;
-  width: 50%;
-}
-
-.toggle-user {
-  overflow: hidden;
-  /* border: 1px solid #4d73f8; */
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.toggle-user h3 {
-  padding: 1rem;
-  font-family: "Open Sans", sans-serif;
-  width: 10rem;
-  display: none;
-}
-
-.toggle-user .job-seeker {
-  background-color: #4d73f8;
-  color: #fff;
-  width: 10rem;
-}
-
-.toggle-user .employer {
-  float: right;
-  color: #4d73f8;
+  text-align: center;
 }
 
 .sign-in-details h6 {
@@ -67,6 +44,7 @@ form .input-box h6 {
   font-weight: 400;
   line-height: normal;
   text-align: left;
+  margin-left: 1.5rem;
 }
 
 form input {
@@ -74,6 +52,10 @@ form input {
   border: 0.5px solid rgba(77, 115, 248, 0.56);
   width: 400px;
   height: 50px;
+}
+
+form .checkbox {
+  margin-left: 1.5rem;
 }
 
 form .checkbox span {
@@ -106,14 +88,79 @@ form button {
   color: #4d73f8;
 }
 
+.sign-in-img-area {
+  background-image: url(/public/Rectangle\ 532.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.sign-in-img-area2 {
+  background-image: url(/public/Rectangle\ 533.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+
+.content-container {
+  border-radius: 20px;
+  background: rgba(77, 115, 248, 0.6);
+  margin: 3rem 2rem;
+}
+
+.content-container h3 {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 2rem 0 1rem 0;
+}
+
+.content-container hr {
+  width: 20%;
+  margin-bottom: 1rem;
+  border: 1px solid #fff;
+}
+
+.content-container h3 a {
+  color: #fff;
+}
+
+.content-container .link h3 {
+  margin: 0.5rem 0 3rem 0;
+}
+
+.content-container h6 {
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.content-container h4 {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 12rem;
+}
+
 /* Tablets and under */
 @media all and (max-width: 768px) {
+  .sign-in .container {
+    padding: 10px;
+  }
   .sign-in-details {
     width: 100%;
   }
 
-  .sign-in-details h6 {
-    color: #fff;
+  .sign-in .logo {
+    margin-left: 2rem;
   }
 
   form {
@@ -125,8 +172,25 @@ form button {
     width: 100%;
   }
 
-  .sign-in-details h6 a {
-    color: #1b0065;
+  form .checkbox,
+  form .input-box h6 {
+    margin-left: 0;
+  }
+
+  .content-container .container {
+    padding: 20px;
+  }
+
+  .content-container h3 {
+    font-size: 20px;
+  }
+
+  .content-container h6 {
+    font-size: 12px;
+  }
+
+  .content-container h4 {
+    font-size: 14px;
   }
 }
 
@@ -136,19 +200,9 @@ form button {
     padding: 1rem 0;
   }
 
-  .toggle-user {
-    margin-top: 2rem;
-  }
-
-  .toggle-user h3 {
-    padding: 0.5rem;
-    font-size: small;
-  }
-
   form .input-box h6,
   form .checkbox span {
     font-size: 10px;
-    color: #fff;
   }
 
   input[type="checkbox"] {

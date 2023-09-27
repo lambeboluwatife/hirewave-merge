@@ -17,7 +17,7 @@ const Showcase = ({ showcase }) => {
             <path
               d="M198.558 205.042L6.47273 139.012L159.699 5.67596L198.558 205.042Z"
               stroke="#96B300"
-              stroke-width="6"
+              strokeWidth="6"
             />
           </svg>
         )}

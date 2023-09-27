@@ -32,15 +32,14 @@ const App = () => {
 
   const [dropdown, setDropdown] = useState(false);
 
-  const usersFromDB = useLiveQuery(() => db.users.toArray(), []);
-
   const toggleDropdown = () => {
     setDropdown(!dropdown);
   };
 
+  const jobs = useLiveQuery(() => db.jobs.toArray());
+
   const logUser = async (user) => {
-    const email = user.email;
-    const password = user.password;
+    const { email, password } = user;
 
     // Check if user exists in Dexie database
     const users = await db.users.toArray();
@@ -62,14 +61,63 @@ const App = () => {
     });
   };
 
-  const addUser = async (user) => {
-    const name = user.name;
-    const email = user.email;
-    const password = user.password;
-    const reminder = user.reminder;
-    const createdAt = user.createdAt;
+  const postJob = async (jobInfo) => {
+    const {
+      jobPosition,
+      contractType,
+      flexibility,
+      location,
+      role,
+      duties,
+      aboutCandidate,
+      compensations,
+      companyName,
+      logo,
+      aboutCompany,
+      recruiting,
+      postedAt,
+    } = jobInfo;
 
-    // Check if name already exists in Dexie database
+    // check if a particular job exists in database
+    const jobs = await db.jobs.toArray();
+
+    const existingJob = jobs.find((job) => {
+      if (job.jobPosition === jobPosition && job.companyName === companyName) {
+        return;
+      }
+    });
+
+    if (existingJob) {
+      setShowNotification(!showNotification);
+      setNotificationText(`${email} already registered`);
+      setNotificationType("error");
+    } else {
+      // add new job
+      await db.jobs.add({
+        jobPosition,
+        contractType,
+        flexibility,
+        location,
+        role,
+        duties,
+        aboutCandidate,
+        compensations,
+        companyName,
+        logo,
+        aboutCompany,
+        recruiting,
+        postedAt,
+      });
+      setShowNotification(!showNotification);
+      setNotificationText("Job Posted");
+      setNotificationType("success");
+    }
+  };
+
+  const addUser = async (user) => {
+    const { name, email, password, reminder, createdAt } = user;
+
+    // Check if name already exists in  database
     const users = await db.users.toArray();
 
     const existingUser = users.find((user) => user.email === email);
@@ -79,7 +127,7 @@ const App = () => {
       setNotificationText(`${email} already registered`);
       setNotificationType("error");
     } else {
-      // Add the new birthday!
+      // Add the new user!
       await db.users.add({
         name,
         email,
@@ -104,7 +152,10 @@ const App = () => {
       />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/employers" element={<Employers />} />
+        <Route
+          path="/employers"
+          element={<Employers postJob={postJob} loggedIn={loggedIn} />}
+        />
         <Route path="/resources" element={<Resource />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/support" element={<Support />} />

@@ -75,6 +75,7 @@ header .login-btn:hover {
   padding: 1rem;
   color: #fff;
   border-radius: 10px;
+  text-align: center;
 }
 
 .loggedUser:hover {

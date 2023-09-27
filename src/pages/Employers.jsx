@@ -10,7 +10,7 @@ import cards from "../data/employersCard";
 
 import employersImage from "/Rectangle 505.jpg";
 
-const Employers = () => {
+const Employers = ({ postJob, loggedIn }) => {
   useEffect(() => {
     document.title = "Hirewave | Employers Page";
   }, []);
@@ -30,7 +30,7 @@ const Employers = () => {
       <EmployersJumbotron cards={cards} />
       <HiringExperience data={experienceData} />
       <Note />
-      <PostJob />
+      <PostJob postJob={postJob} loggedIn={loggedIn} />
     </>
   );
 };
