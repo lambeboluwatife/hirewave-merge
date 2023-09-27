@@ -32,20 +32,20 @@ const Note = () => {
               <path
                 d="M32.7591 28.868H18.4543V39.2214H10.9658V11.0915H25.4118"
                 stroke="url(#paint0_linear_1028_1048)"
-                stroke-width="4.22"
-                stroke-miterlimit="10"
+                strokeWidth="4.22"
+                strokeMiterlimit="10"
               />
               <path
                 d="M17.1299 21.4446H31.4346V11.0915H38.9232V39.2214H24.4771"
                 stroke="url(#paint1_linear_1028_1048)"
-                stroke-width="4.22"
-                stroke-miterlimit="10"
+                strokeWidth="4.22"
+                strokeMiterlimit="10"
               />
               <path
                 d="M47 47H3V3H47V47Z"
                 stroke="url(#paint2_linear_1028_1048)"
-                stroke-width="4.22"
-                stroke-miterlimit="10"
+                strokeWidth="4.22"
+                strokeMiterlimit="10"
               />
               <defs>
                 <linearGradient
@@ -56,8 +56,8 @@ const Note = () => {
                   y2="181.39"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#2154AC" />
-                  <stop offset="1" stop-color="#20B5BC" />
+                  <stop stopColor="#2154AC" />
+                  <stop offset="1" stopColor="#20B5BC" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_1028_1048"
@@ -67,8 +67,8 @@ const Note = () => {
                   y2="149.178"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#2154AC" />
-                  <stop offset="1" stop-color="#20B5BC" />
+                  <stop stopColor="#2154AC" />
+                  <stop offset="1" stopColor="#20B5BC" />
                 </linearGradient>
                 <linearGradient
                   id="paint2_linear_1028_1048"
@@ -78,8 +78,8 @@ const Note = () => {
                   y2="189.482"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#2154AC" />
-                  <stop offset="1" stop-color="#20B5BC" />
+                  <stop stopColor="#2154AC" />
+                  <stop offset="1" stopColor="#20B5BC" />
                 </linearGradient>
               </defs>
             </svg>

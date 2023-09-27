@@ -47,8 +47,8 @@ const HiringExperience = ({ data }) => {
                       y2="10.0001"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#80868A" />
-                      <stop offset="1" stop-color="#2A2C2F" />
+                      <stop stopColor="#80868A" />
+                      <stop offset="1" stopColor="#2A2C2F" />
                     </linearGradient>
                   </defs>
                 </svg>
