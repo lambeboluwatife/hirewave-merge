@@ -3,32 +3,23 @@ import { faBars, faRemove } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "react-router-dom";
-import SignUpModal from "./SignUpModal";
 
 const Header = ({ dropdown, toggleDropdown, loggedIn, userName }) => {
-  const [showModal, setShowModal] = useState(false);
-  const [modalContent, setModalContent] = useState({});
-
   const location = useLocation();
-  const hideHeaderForPaths = ["/sign-in", "/sign-up"];
+  const hideHeaderForPaths = [
+    "/sign-in",
+    "/sign-up",
+    "/employer/sign-in",
+    "/employer/sign-up",
+    "/dashboard",
+    "/candidates",
+    "/settings",
+    "/job-dashboard",
+  ];
 
   if (hideHeaderForPaths.includes(location.pathname)) {
     return <></>;
   }
-
-  const signInModalContent = {
-    head: "Login to your account",
-    btn: "Sign in",
-    link: "/sign-in",
-    employer: "/employer/sign-in",
-  };
-
-  const signUpModalContent = {
-    head: "Create your account",
-    btn: "Sign up",
-    link: "/sign-up",
-    employer: "/employer/sign-up",
-  };
 
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -99,13 +90,15 @@ const Header = ({ dropdown, toggleDropdown, loggedIn, userName }) => {
             </div>
           ) : (
             <>
-              <button className="login-btn" onClick={toggleModal}>
-                <strong>Log in</strong>
-              </button>
+              <a href="/auth/sign-in">
+                <button className="login-btn">
+                  <strong>Log in</strong>
+                </button>
+              </a>
 
-              <button className="btn" onClick={toggleModal2}>
-                Sign up
-              </button>
+              <a href="/auth/sign-up">
+                <button className="btn">Sign up</button>
+              </a>
             </>
           )}
         </div>
@@ -142,19 +135,16 @@ const Header = ({ dropdown, toggleDropdown, loggedIn, userName }) => {
             </div>
           ) : (
             <>
-              <button className="cta2" onClick={toggleModal}>
-                Log in
-              </button>
+              <a href="/auth/sign-in">
+                <button className="cta2">Log in</button>
+              </a>
 
-              <button className="cta" onClick={toggleModal2}>
-                Sign up
-              </button>
+              <a href="/auth/sign-up">
+                <button className="cta">Sign up</button>
+              </a>
             </>
           )}
         </div>
-      )}
-      {showModal && (
-        <SignUpModal modalContent={modalContent} toggleModal={toggleModal} />
       )}
     </>
   );

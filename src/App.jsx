@@ -5,8 +5,11 @@ import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp";
+import SignIn from "./components/AuthPages/SignIn";
+import SignUp from "./components/AuthPages/SignUp";
+
+import EmployerSignIn from "./components/AuthPages/EmployerSignIn";
+import EmployerSignUp from "./components/AuthPages/EmployerSignUp";
 
 import Resource from "./pages/Resource";
 import Jobs from "./pages/Jobs";
@@ -17,9 +20,11 @@ import Employers from "./pages/Employers";
 import { db } from "./dexie";
 import { useLiveQuery } from "dexie-react-hooks";
 
-import Notifications from "./Notifications";
+import Notifications from "./components/Notifications";
 import NotFound from "./components/NotFound";
-import SignUpModal from "./components/SignUpModal";
+import SignUpModal from "./components/AuthPages/SignUpModal";
+import SignInModal from "./components/AuthPages/SignInModal";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 const App = () => {
   const navigate = useNavigate();
@@ -50,7 +55,7 @@ const App = () => {
     // Check if user exists in Dexie database
     const users = await db.users.toArray();
 
-    const userToLogIn = users.find((user) => {
+    users.find((user) => {
       if (user.email === email && user.password === password) {
         const firstName = user.name.split(" ")[0];
         navigate("/", { replace: true });
@@ -121,7 +126,7 @@ const App = () => {
   };
 
   const addUser = async (user) => {
-    const { name, email, password, reminder, createdAt } = user;
+    const { name, email, password, reminder, type, createdAt } = user;
 
     // Check if name already exists in  database
     const users = await db.users.toArray();
@@ -139,6 +144,7 @@ const App = () => {
         email,
         password,
         reminder,
+        type,
         createdAt,
       });
       navigate("/sign-in", { replace: true });
@@ -167,6 +173,19 @@ const App = () => {
         <Route path="/support" element={<Support />} />
         <Route path="/sign-in" element={<SignIn onLogin={logUser} />} />
         <Route path="/sign-up" element={<SignUp onAdd={addUser} />} />
+        <Route
+          path="/employer/sign-in"
+          element={<EmployerSignIn onLogin={logUser} />}
+        />
+        <Route
+          path="/employer/sign-up"
+          element={<EmployerSignUp onAdd={addUser} />}
+        />
+        <Route path="/auth/sign-in" element={<SignInModal />} />
+        <Route path="/auth/sign-up" element={<SignUpModal />} />
+
+        <Route path="/dashboard" element={<Dashboard />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
       {showNotification && (

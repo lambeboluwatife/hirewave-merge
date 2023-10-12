@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Nunito:wght@300&family=Ultra&family=Kanit&family=Open+Sans:wght@600&display=swap");
+
+:root {
+  --primary-color: #4d73f8;
+  --secondary-color: #fff;
+  --tertiary-color: #090020;
+}
+
+.side-nav {
+  background-color: var(--primary-color);
+  padding: 20px;
+  height: 100vh;
+  text-align: center;
+}
+
+.side-nav .logo {
+  font-size: 25px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+}
+
+.side-nav .logo a {
+  color: #fff;
+}
+
+.side-nav .button button {
+  padding: 12px 24px;
+  border: none;
+  background-color: #fff;
+  color: #090020;
+  border-radius: 6px;
+  margin-top: 3rem;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.side-nav .line {
+  margin-top: 1rem;
+  background-color: #090020;
+}
+
+.side-nav ul {
+  margin-top: 3rem;
+  text-align: start;
+  padding: 0 2rem;
+}
+
+.side-nav ul li {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.side-nav ul li a {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.side-nav ul .log-out {
+  margin-top: 5rem;
+}

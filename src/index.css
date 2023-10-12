@@ -39,6 +39,22 @@ body {
   grid-template-columns: repeat(5, 1fr);
 }
 
+.column {
+  float: left;
+}
+
+.left {
+  position: fixed;
+  width: 20%;
+  height: 100vh;
+}
+
+.right {
+  width: 80%;
+  height: 100vh;
+  margin-left: 20%;
+}
+
 #toasts {
   position: fixed;
   bottom: 20px;
@@ -58,21 +74,15 @@ body {
 }
 
 .sign-up-modal {
-  position: fixed;
-  bottom: 20%;
-  left: 25%;
   text-align: center;
   border-radius: 10px;
-  border: 1px solid rgba(171, 171, 171, 0.22);
-  background: #fff;
-  box-shadow: 4px 4px 4px 0px rgba(171, 171, 171, 0.05);
-  padding: 30px;
-  width: 50%;
-  z-index: 4;
+  height: 90vh;
 }
 
-.sign-up-modal .grid {
-  gap: 0;
+.sign-up-modal .modal-cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .sign-up-modal h2 {
@@ -94,12 +104,10 @@ body {
 }
 
 .sign-up-modal .modal-card {
-  position: relative;
   margin: 2rem;
   padding: 2rem;
   border-radius: 24px;
   border: 1px solid rgba(171, 171, 171, 0.22);
-  background: #fff;
   box-shadow: 4px 4px 4px 0px rgba(171, 171, 171, 0.05);
 }
 
@@ -107,8 +115,7 @@ body {
   width: 60%;
 }
 
-.sign-up-modal a,
-.sign-up-modal .close-modal .btn {
+.sign-up-modal a {
   display: inline-flex;
   padding: 6px 16px;
   justify-content: center;
@@ -124,8 +131,7 @@ body {
 
 @media all and (max-width: 768px) {
   .sign-up-modal {
-    width: 70%;
-    left: 15%;
+    height: 50vh;
   }
 
   .sign-up-modal .modal-icon {
@@ -134,16 +140,6 @@ body {
 }
 
 @media all and (max-width: 500px) {
-  .sign-up-modal .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .sign-up-modal {
-    bottom: 25%;
-    width: 90%;
-    left: 5%;
-  }
-
   .sign-up-modal h2,
   .sign-up-modal h3 {
     font-size: 15px;
@@ -192,6 +188,9 @@ body {
 }
 
 @media all and (max-width: 320px) {
+  .sign-up-modal {
+    height: 40vh;
+  }
   .sign-up-modal h3 {
     font-size: 8px;
   }
