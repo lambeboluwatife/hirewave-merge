@@ -57,7 +57,7 @@ const SignUp = ({ onAdd }) => {
       return;
     }
 
-    onAdd({ name, email, password, reminder, createdAt });
+    onAdd({ name, email, password, reminder, type: "job seeker", createdAt });
 
     setName("");
     setEmail("");

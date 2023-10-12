@@ -2,7 +2,16 @@ import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
-  const hideHeaderForPaths = ["/sign-in", "/sign-up"];
+  const hideHeaderForPaths = [
+    "/sign-in",
+    "/sign-up",
+    "/employer/sign-in",
+    "/employer/sign-up",
+    "/dashboard",
+    "/candidates",
+    "/settings",
+    "/job-dashboard",
+  ];
 
   if (hideHeaderForPaths.includes(location.pathname)) {
     return <></>;

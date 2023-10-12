@@ -1,0 +1,33 @@
+@media all and (max-width: 500px) {
+  .not-found h1 {
+    font-size: 8rem;
+  }
+
+  .not-found .button .btn {
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .not-found h3 {
+    font-size: small;
+  }
+  .not-found h6 {
+    font-size: 10px;
+  }
+
+  .not-found .button .btn,
+  .not-found .button .btn2 {
+    font-size: 10px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .not-found h1 {
+    font-size: 7rem;
+  }
+
+  .not-found .button .btn {
+    margin-bottom: 1rem;
+  }
+}

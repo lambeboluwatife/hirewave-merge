@@ -112,20 +112,22 @@ const SignIn = ({ onLogin }) => {
               </div>
             </div>
           </div>
-          <div className="sign-in-img-area2">
+          <div className="sign-in-img-area">
             <div className="container">
               <div className="content-container">
                 <div className="container">
                   <h3>
-                    WELCOME <br /> EMPLOYERS!
+                    YOUR JOURNEY BEGINS <br /> HERE!
                   </h3>
                   <hr />
                   <h6>
-                    Join our platform to unlock a world of talent and
-                    opportunity. Sign up now to access a pool of skilled
-                    professionals and streamline your hiring process.
+                    Where innovation meets impact, and your <br /> aspirations
+                    meet achievements.
                   </h6>
-                  <h6>Take the first step towards building your dream team!</h6>
+                  <h6>
+                    Ready to shape your future with us? Let’s take <br /> the
+                    first step together.
+                  </h6>
 
                   <h4>Already have an account?</h4>
                   <div className="link">

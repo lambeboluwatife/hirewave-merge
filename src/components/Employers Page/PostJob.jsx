@@ -1,6 +1,6 @@
 import { useState } from "react";
 import moment from "moment/moment";
-import Notifications from "../../Notifications";
+import Notifications from "../Notifications";
 
 const PostJob = ({ postJob, loggedIn }) => {
   const [jobPosition, setJobPosition] = useState("");
