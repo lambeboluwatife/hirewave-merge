@@ -3,6 +3,8 @@ import election from "/Job Responsibility Bag Thumbs Up.svg";
 import talent from "/Election Campaign 1.svg";
 import resume from "/ph_read-cv-logo-thin.svg";
 
+import percent from "/percent.png";
+
 const services = [
   {
     title: "Customized Recruitment Campaigns",
@@ -31,6 +33,24 @@ const services = [
     description:
       "We assist businesses in optimizing their hiring process by providing guidance on reviewing resumes and conducting effective interviews.",
     id: 4,
+  },
+];
+
+export const dashboardData = [
+  {
+    head: "Total Applicants",
+    figure: 0,
+    img: percent,
+  },
+  {
+    head: "Rejected Candidates",
+    figure: 0,
+    img: percent,
+  },
+  {
+    head: "Invited Candidates",
+    figure: 0,
+    img: percent,
   },
 ];
 
