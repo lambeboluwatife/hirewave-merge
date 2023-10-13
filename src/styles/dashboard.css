@@ -42,7 +42,7 @@
 }
 
 .side-nav ul {
-  margin-top: 3rem;
+  margin-top: 2rem;
   text-align: start;
   padding: 0 2rem;
 }
@@ -63,7 +63,7 @@
 }
 
 .side-nav ul .log-out {
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 .dashboard .dashboard-header {
@@ -91,6 +91,7 @@
 .dashboard .dashboard-header .search-bar input[type="search"] {
   width: 320px;
   height: 40px;
+  border-radius: 2px;
 }
 
 .dashboard .dashboard-header .search-bar img {
@@ -137,6 +138,77 @@
 .dashboard .cards .card img {
   position: absolute;
   z-index: 1;
-  bottom: 20%;
+  bottom: 81%;
   margin-left: 18%;
+}
+
+.dashboard .cards .grid > *:nth-child(4) {
+  grid-column: 1 / span 2;
+}
+
+.dashboard .cards .grid > *:nth-child(6) {
+  grid-column: 1 / span 3;
+}
+
+.dashboard .cards .card.card2 h4,
+.dashboard .cards .card.card2 h6 {
+  display: inline;
+}
+
+.dashboard .cards .card.card2 h4,
+.dashboard .cards .card.card3 h4 {
+  color: #020c18;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.dashboard .cards .card.card2 h6 {
+  float: right;
+  color: #96b300;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  cursor: pointer;
+}
+
+.dashboard .cards .card.card2 h5 {
+  color: #6d6d6d;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 2rem 0 4rem 0;
+}
+
+.dashboard .cards .card.card3 .card3-content {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.dashboard .cards .card.card3 h6 {
+  color: #6d6d6d;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.dashboard .cards .card.card3 .card3-content > *:nth-child(2) {
+  margin-left: 8rem;
+}
+
+.dashboard .cards .card.card3 h5 {
+  color: #6d6d6d;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  margin: 5rem 0 2rem 0;
 }
