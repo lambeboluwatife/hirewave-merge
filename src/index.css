@@ -55,6 +55,10 @@ body {
   margin-left: 20%;
 }
 
+.column.right .container {
+  padding: 0 80px;
+}
+
 #toasts {
   position: fixed;
   bottom: 20px;
