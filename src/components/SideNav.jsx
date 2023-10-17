@@ -1,8 +1,9 @@
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SideNav = () => {
+  const location = useLocation();
   return (
     <div className="side-nav">
       <h3 className="logo">
@@ -66,7 +67,25 @@ const SideNav = () => {
             Settings
           </a>
         </li>
-        <li className="log-out">
+        <li>
+          {location.pathname === "/job-seeker/dashboard" && (
+            <div className="premium">
+              <h5>
+                Upgrade to a <br /> premium account.
+              </h5>
+              <h6>
+                Get access to premium <br /> features and more.
+              </h6>
+              <h6 className="go-premium">Go Premium</h6>
+              <img src="/gift.png" alt="" />
+            </div>
+          )}
+        </li>
+        <li
+          className={
+            location.pathname === "/employer/dashboard" ? "log-out" : ""
+          }
+        >
           <a>
             {" "}
             <img src="/log-out.png" alt="" />

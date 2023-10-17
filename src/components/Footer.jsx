@@ -7,10 +7,10 @@ const Footer = () => {
     "/sign-up",
     "/employer/sign-in",
     "/employer/sign-up",
-    "/dashboard",
+    "/employer/dashboard",
     "/candidates",
     "/settings",
-    "/job-dashboard",
+    "/job-seeker/dashboard",
   ];
 
   if (hideHeaderForPaths.includes(location.pathname)) {
