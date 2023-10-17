@@ -25,6 +25,7 @@ import NotFound from "./components/NotFound";
 import SignUpModal from "./components/AuthPages/SignUpModal";
 import SignInModal from "./components/AuthPages/SignInModal";
 import Dashboard from "./components/Dashboard/Dashboard";
+import JobSeekerDashboard from "./components/Dashboard/JobSeekerDashboard";
 
 const App = () => {
   const navigate = useNavigate();
@@ -58,7 +59,7 @@ const App = () => {
     users.find((user) => {
       if (user.email === email && user.password === password) {
         const firstName = user.name.split(" ")[0];
-        navigate("/", { replace: true });
+        navigate("/job-seeker/dashboard", { replace: true });
         setShowNotification(!showNotification);
         setLoggedIn(!loggedIn);
         setUserName(`${firstName}`);
@@ -184,7 +185,11 @@ const App = () => {
         <Route path="/auth/sign-in" element={<SignInModal />} />
         <Route path="/auth/sign-up" element={<SignUpModal />} />
 
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/employer/dashboard" element={<Dashboard />} />
+        <Route
+          path="/job-seeker/dashboard"
+          element={<JobSeekerDashboard userName={userName} />}
+        />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

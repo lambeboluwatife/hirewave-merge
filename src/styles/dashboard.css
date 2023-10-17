@@ -49,7 +49,7 @@
 
 .side-nav ul li {
   list-style-type: none;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .side-nav ul li a {
@@ -63,14 +63,25 @@
 }
 
 .side-nav ul .log-out {
-  margin-top: 7rem;
+  margin-top: 8rem;
+}
+
+.dashboard,
+.job-seeker-dashboard {
+  padding-top: 10px;
 }
 
 .dashboard .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  margin-bottom: 1rem;
+}
+
+.job-seeker-dashboard .dashboard-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -88,10 +99,20 @@
   left: 18%;
 }
 
+.job-seeker-dashboard .dashboard-header .search-bar {
+  position: relative;
+}
+
 .dashboard .dashboard-header .search-bar input[type="search"] {
   width: 320px;
   height: 40px;
-  border-radius: 2px;
+  border-radius: 5px;
+}
+
+.job-seeker-dashboard .dashboard-header .search-bar input[type="search"] {
+  width: 550px;
+  height: 40px;
+  border-radius: 5px;
 }
 
 .dashboard .dashboard-header .search-bar img {
@@ -100,16 +121,44 @@
   top: 22%;
 }
 
+.job-seeker-dashboard .dashboard-header .search-bar img {
+  position: absolute;
+  right: 2%;
+  top: 22%;
+}
+
+.job-seeker-dashboard .dashboard-header h6 {
+  display: inline-block;
+  margin-left: 1rem;
+  color: #020c18;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .dashboard .dashboard-header .dropdown {
   width: 30px;
   margin: 0 0 7% 5px;
 }
 
-.dashboard .cards .card {
+.job-seeker-dashboard .dashboard-header .notification-img {
+  width: 30px;
+  margin: 0 0 2% 5px;
+}
+
+.dashboard .cards .card,
+.job-seeker-dashboard .cards .card,
+.job-seeker-dashboard .cards2 .card {
   border-radius: 10px;
   border: 0.3px solid rgba(2, 12, 24, 0.51);
   background: #fff;
   padding: 20px;
+}
+
+.job-seeker-dashboard .cards2 .card {
+  margin-top: 1rem;
 }
 
 .dashboard .cards {
@@ -211,4 +260,140 @@
   line-height: normal;
   text-align: center;
   margin: 5rem 0 2rem 0;
+}
+
+.job-seeker-dashboard .cards {
+  position: relative;
+}
+
+.job-seeker-dashboard .cards .card h4,
+.job-seeker-dashboard .cards2 .card h4 {
+  color: #020c18;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.job-seeker-dashboard .cards .grid > *:first-child {
+  grid-column: 1 / span 2;
+  height: 15rem;
+}
+
+.job-seeker-dashboard .cards .grid > *:nth-child(2) {
+  height: 24.8rem;
+}
+
+.job-seeker-dashboard .cards .grid > *:nth-child(3) {
+  grid-column: 1 / span 2;
+  position: absolute;
+  top: 63%;
+  width: 55%;
+}
+
+.job-seeker-dashboard .cards .card .card1-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-seeker-dashboard .cards .card .card1-content h5 {
+  color: #6d6d6d;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 2rem;
+}
+
+.job-seeker-dashboard .cards .card button {
+  border-radius: 10px;
+  background: #4d73f8;
+  padding: 5px 24px;
+  color: #fff;
+  border: 1px solid #4d73f8;
+  font-family: "Nunito", sans-serif;
+}
+
+.job-seeker-dashboard .cards .card.card2 hr {
+  border: 1px solid rgba(150, 179, 0, 0.3);
+  border-radius: 5px;
+  background: rgba(150, 179, 0, 0.3);
+  width: 327.705px;
+  height: 13px;
+  margin: 1rem 0;
+}
+
+.job-seeker-dashboard .cards .card.card2 h6 {
+  color: #6d6d6d;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.job-seeker-dashboard .cards .card.card2 ul {
+  margin: 1rem;
+}
+
+.job-seeker-dashboard .cards .card.card2 ul li {
+  padding: 0.5rem 0;
+  list-style-type: none;
+}
+
+.job-seeker-dashboard .cards .card.card3 h5,
+.job-seeker-dashboard .cards2 .card h5 {
+  color: #6d6d6d;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 2rem 0 2rem 0;
+}
+
+.premium {
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 4px 4px 4px 0px rgba(2, 12, 24, 0.15);
+  width: 178px;
+  height: 178px;
+  padding: 20px;
+  position: relative;
+  right: 15%;
+}
+
+.premium h5 {
+  color: #020c18;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.premium h6 {
+  color: #6d6d6d;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.premium .go-premium {
+  color: #96b300;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.premium img {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  bottom: 20%;
+  left: 60%;
 }

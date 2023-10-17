@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { faBars, faRemove } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -11,10 +10,10 @@ const Header = ({ dropdown, toggleDropdown, loggedIn, userName }) => {
     "/sign-up",
     "/employer/sign-in",
     "/employer/sign-up",
-    "/dashboard",
+    "/employer/dashboard",
     "/candidates",
     "/settings",
-    "/job-dashboard",
+    "/job-seeker/dashboard",
   ];
 
   if (hideHeaderForPaths.includes(location.pathname)) {
