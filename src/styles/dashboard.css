@@ -66,6 +66,15 @@
   margin-top: 8rem;
 }
 
+.menu {
+  position: fixed;
+  color: #4d73f8;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none;
+}
+
 .dashboard,
 .job-seeker-dashboard {
   padding-top: 10px;
@@ -223,7 +232,8 @@
   cursor: pointer;
 }
 
-.dashboard .cards .card.card2 h5 {
+.dashboard .cards .card.card2 h5,
+.dashboard .cards .card.card3 h5 {
   color: #6d6d6d;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -253,11 +263,6 @@
 }
 
 .dashboard .cards .card.card3 h5 {
-  color: #6d6d6d;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
   text-align: center;
   margin: 5rem 0 2rem 0;
 }

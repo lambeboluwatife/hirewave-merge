@@ -1,0 +1,144 @@
+/* Tablets and under */
+@media all and (max-width: 768px) {
+  .left {
+    width: 25%;
+  }
+
+  .right {
+    width: 75%;
+    margin-left: 25%;
+  }
+
+  .side-nav .logo {
+    font-size: 15px;
+  }
+
+  .side-nav .logo a {
+    font-size: 20px;
+  }
+
+  .side-nav .button button {
+    margin-top: 2rem;
+  }
+
+  .side-nav ul {
+    padding: 0;
+  }
+
+  .column.right .container {
+    padding: 20px;
+  }
+
+  .dashboard,
+  .job-seeker-dashboard {
+    padding-top: 0;
+  }
+
+  .dashboard .dashboard-header .search-bar {
+    left: 5%;
+  }
+
+  .dashboard .dashboard-header .search-bar input[type="search"] {
+    width: 250px;
+  }
+
+  .dashboard .cards .card img {
+    bottom: 77%;
+    margin-left: 10%;
+  }
+}
+
+/* Mobile */
+@media all and (max-width: 500px) {
+  .grid,
+  .dashboard .cards .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .column {
+    float: none;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .column.right .container {
+    padding-top: 10px;
+  }
+
+  .dashboard .dashboard-header h2 {
+    font-size: 20px;
+  }
+
+  .dashboard .dashboard-header .search-bar {
+    left: 0;
+  }
+
+  .dashboard .dashboard-header .search-bar input[type="search"] {
+    width: 200px;
+    height: 20px;
+  }
+
+  .dashboard .dashboard-header .user-img {
+    width: 30px;
+  }
+
+  .dashboard .cards .card img {
+    display: none;
+  }
+
+  .dashboard .cards .card.card2 h4,
+  .dashboard .cards .card.card3 h4 {
+    font-size: 12px;
+  }
+
+  .dashboard .cards .card.card2 h6 {
+    font-size: 12px;
+  }
+
+  .dashboard .cards .card.card3 .card3-content {
+    padding: 0 1rem;
+  }
+
+  .dashboard .cards .card.card3 h6 {
+    font-size: 10px;
+  }
+
+  .dashboard .cards .card.card2 h5,
+  .dashboard .cards .card.card3 h5 {
+    font-size: 10px;
+  }
+}
+
+/* Mobile */
+@media all and (max-width: 400px) {
+  .column.right .container {
+    padding: 10px;
+  }
+
+  .dashboard .dashboard-header .search-bar input[type="search"] {
+    width: 180px;
+    height: 20px;
+  }
+}
+
+/* Mobile */
+@media all and (max-width: 320px) {
+  .grid,
+  .dashboard .cards .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .dashboard .dashboard-header .search-bar input[type="search"] {
+    width: 120px;
+    height: 20px;
+  }
+}

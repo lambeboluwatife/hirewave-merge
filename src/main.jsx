@@ -9,6 +9,7 @@ import "./styles/responsiveness/landingPage.css";
 import "./styles/responsiveness/employers.css";
 import "./styles/responsiveness/notFound.css";
 import "./styles/dashboard.css";
+import "./styles/responsiveness/dashboard.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
