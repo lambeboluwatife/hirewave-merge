@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import SideNav from "../SideNav";
 import { dashboardData } from "../../data/services";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Dashboard = () => {
   useEffect(() => {
@@ -18,19 +20,19 @@ const Dashboard = () => {
               <h2>Dashboard</h2>
               <div className="search-bar">
                 <div>
-                  <input type="search" placeholder="Search" />
+                  <input type="search" name="search" placeholder="Search" />
                   <img src="/search.png" alt="" />
                 </div>
               </div>
               <div>
-                <img style={{ width: "40px" }} src="/user.png" alt="" />
+                <img className="user-img" src="/user.png" alt="" />
                 <img className="dropdown" src="/dropdown.png" alt="" />
               </div>
             </div>
             <div className="cards">
               <div className="grid grid-3">
-                {dashboardData.map((data) => (
-                  <div className="card">
+                {dashboardData.map((data, index) => (
+                  <div className="card" key={index}>
                     <h6>{data.head}</h6>
                     <h2>{data.figure}</h2>
                     <img src={data.img} alt="" />
@@ -59,6 +61,12 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        <FontAwesomeIcon
+          className={`fa-2x menu`}
+          icon={faBars}
+          // icon={sideNav ? faRemove : faBars}
+          // onClick={toggleSideNav}
+        />
       </div>
     </>
   );
