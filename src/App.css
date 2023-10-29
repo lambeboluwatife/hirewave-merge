@@ -12,6 +12,7 @@ header {
   align-items: center;
   padding: 15px 10%;
   height: 10vh;
+  background: #f4faff;
 }
 
 .logo {
@@ -58,11 +59,12 @@ a {
 header .login-btn {
   display: inline-block;
   padding: 0px 20px;
+  color: #6d6d6d;
   font-family: "Nunito", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-style: normal;
-  line-height: 150%;
-  color: var(--primary-color);
+  font-weight: 400;
+  line-height: normal;
   border: none;
   background: transparent;
 }
@@ -194,6 +196,7 @@ header .menu-bar {
 
 .showcase {
   height: 90vh;
+  background: #f4faff;
 }
 
 .showcase-content {
@@ -212,13 +215,15 @@ header .menu-bar {
 }
 
 .showcase-content h6 {
-  color: rgba(9, 0, 32, 0.7);
+  color: #6d6d6d;
   font-family: "Nunito", sans-serif;
   font-size: small;
   font-style: normal;
+  font-size: 15px;
   line-height: 150%;
   margin: 30px 0 30px 0;
   white-space: pre-wrap;
+  align-self: stretch;
 }
 
 .showcase-content button {
@@ -228,8 +233,8 @@ header .menu-bar {
 .showcase svg {
   position: absolute;
   z-index: 3;
-  top: 15rem;
-  left: 42rem;
+  top: 16rem;
+  left: 33rem;
 }
 
 .showcase-img {
@@ -239,6 +244,85 @@ header .menu-bar {
   left: 49rem;
   height: 100vh;
   bottom: 1px;
+}
+
+.home-img {
+  position: absolute;
+  z-index: 1;
+  width: 45%;
+  left: 40rem;
+}
+
+.showcase .home-search {
+  position: relative;
+}
+
+.showcase .home-search input {
+  position: relative;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(77, 115, 248, 0.1);
+  z-index: 1;
+}
+
+.showcase .home-search .home-search-svg {
+  position: absolute;
+  left: 1%;
+  top: 32%;
+}
+
+.showcase .home-search .home-search-svg2 {
+  position: absolute;
+  left: 20%;
+  top: 32%;
+}
+
+.showcase .home-search .home-search-placeholder {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: 3.5%;
+  top: -18%;
+}
+
+.showcase .home-search .home-search-placeholder2 {
+  margin-left: 4rem;
+}
+
+.showcase .home-search .line {
+  width: 1px;
+  height: 30px;
+  background: #6d6d6d;
+  position: absolute;
+  z-index: 2;
+  left: 19%;
+  top: 22%;
+}
+
+.showcase .home-search .home-search-placeholder h6 {
+  color: #6d6d6d;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.showcase .home-search .home-search-button {
+  border-radius: 10px;
+  border: #4d73f8;
+  background: #4d73f8;
+  padding: 6px 30px;
+  color: #eaf6ff;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  height: 2.5rem;
+  position: absolute;
+  z-index: 3;
+  left: 32%;
+  top: 15%;
+  cursor: pointer;
 }
 
 .mobile-img {
@@ -294,28 +378,28 @@ header .menu-bar {
   position: absolute;
   color: var(--tertiary-color);
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
   z-index: 7;
   display: inline;
   left: 21.3%;
-  top: 25%;
+  top: 30%;
 }
 
 .candidates h6 {
   position: absolute;
   color: var(--tertiary-color);
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
   z-index: 7;
   display: inline;
   left: 27%;
-  top: 26%;
+  top: 33%;
   margin-top: 0;
 }
 
@@ -457,6 +541,7 @@ header .menu-bar {
   font-weight: 600;
   line-height: 150%;
   float: right;
+  margin-right: 0.5rem;
 }
 
 .featured-title a:hover {
@@ -706,6 +791,10 @@ header .menu-bar {
 .faq-jumbo .content h6 span {
   font-weight: 700;
   color: #fff;
+}
+
+.faq-jumbo .content button {
+  margin-right: 8rem;
 }
 
 .not-found {
