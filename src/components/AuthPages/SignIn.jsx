@@ -106,7 +106,7 @@ const SignIn = ({ onLogin }) => {
                       <span>Remember me</span>
                     </div>
 
-                    <button>Sign In</button>
+                    <button className="form-button">Sign In</button>
                   </form>
                 </div>
               </div>

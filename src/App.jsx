@@ -59,12 +59,16 @@ const App = () => {
     users.find((user) => {
       if (user.email === email && user.password === password) {
         const firstName = user.name.split(" ")[0];
-        navigate("/job-seeker/dashboard", { replace: true });
         setShowNotification(!showNotification);
         setLoggedIn(!loggedIn);
         setUserName(`${firstName}`);
         setNotificationText(`Signed In as ${user.name}`);
         setNotificationType("success");
+        if (user.type === "job seeker") {
+          navigate("/job-seeker/dashboard", { replace: true });
+        } else {
+          navigate("/employer/dashboard", { replace: true });
+        }
       } else {
         setShowNotification(!showNotification);
         setNotificationText("Invalid email or password");

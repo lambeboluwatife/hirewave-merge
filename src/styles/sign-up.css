@@ -44,6 +44,7 @@ form .input-box h6 {
   font-weight: 400;
   line-height: normal;
   text-align: left;
+  margin-left: 1.5rem;
 }
 
 form input {
@@ -154,6 +155,7 @@ form .checkbox span {
   .sign-in .container {
     padding: 10px;
   }
+
   .sign-in-details {
     width: 100%;
   }
@@ -227,7 +229,22 @@ form .checkbox span {
 }
 
 /* Mobile */
-@media all and (max-width: 320px) {
+@media all and (max-width: 400px) {
+  .sign-in-details form .input-box {
+    margin: 0 1.5rem;
+  }
+
+  .sign-in-details form .checkbox {
+    margin: 0.5rem 1.5rem;
+  }
+
+  /* .sign-in-details form .form-button {
+    width: 20rem;
+  } */
+}
+
+/* Mobile */
+/* @media all and (max-width: 320px) {
   .sign-in .logo {
     margin: 0;
     font-size: 20px;
@@ -237,4 +254,4 @@ form .checkbox span {
     width: 25px;
     padding-top: 0;
   }
-}
+}  */

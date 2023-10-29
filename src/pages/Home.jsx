@@ -30,7 +30,7 @@ const Home = () => {
 
   const homeShowcase = {
     title: "Your Partner in \nHiring Excellence",
-    text: "Need to discover top-tier talent for your business? \nLook no further. We bridge the gap between fresh \ntalent and thriving businesses.",
+    text: "Need to discover top-tier talent for your business? Look no further. \nWe bridge the gap between fresh talent and thriving businesses.",
     button: "Explore Jobs",
     svg: true,
     image: homeImage,
