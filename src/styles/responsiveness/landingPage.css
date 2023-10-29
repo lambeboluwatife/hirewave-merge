@@ -541,36 +541,13 @@
     display: none;
   }
 
-  .showcase .home-search input {
-    width: 21rem;
+  .showcase .showcase-button {
+    display: block;
+    margin-top: 2rem;
   }
 
-  .showcase .home-search .home-search-svg {
-    left: 0.5%;
-  }
-
-  .showcase .home-search .home-search-svg2 {
-    left: 48%;
-  }
-
-  .showcase .home-search .home-search-placeholder h6 {
-    font-size: 11px;
-  }
-
-  .showcase .home-search .home-search-placeholder {
-    left: 7%;
-  }
-
-  .showcase .home-search .home-search-placeholder2 {
-    margin-left: 2rem;
-  }
-
-  .showcase .home-search .line {
-    left: 47.5%;
-  }
-
-  .showcase .home-search .home-search-button {
-    left: 70%;
+  .showcase .home-search {
+    display: none;
   }
 
   .mobile-img {

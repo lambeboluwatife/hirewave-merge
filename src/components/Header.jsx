@@ -90,9 +90,7 @@ const Header = ({ dropdown, toggleDropdown, loggedIn, userName }) => {
           ) : (
             <>
               <a href="/auth/sign-in">
-                <button className="login-btn">
-                  <strong>Log in</strong>
-                </button>
+                <button className="login-btn">Log in</button>
               </a>
 
               <a href="/auth/sign-up">

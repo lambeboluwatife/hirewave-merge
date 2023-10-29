@@ -12,7 +12,7 @@ header {
   align-items: center;
   padding: 15px 10%;
   height: 10vh;
-  background: #f4faff;
+  /* background: #f4faff; */
 }
 
 .logo {
@@ -63,7 +63,6 @@ header .login-btn {
   font-family: "Nunito", sans-serif;
   font-size: 15px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
   border: none;
   background: transparent;
@@ -196,7 +195,7 @@ header .menu-bar {
 
 .showcase {
   height: 90vh;
-  background: #f4faff;
+  /* background: #f4faff; */
 }
 
 .showcase-content {
@@ -320,12 +319,13 @@ header .menu-bar {
   height: 2.5rem;
   position: absolute;
   z-index: 3;
-  left: 32%;
+  left: 33%;
   top: 15%;
   cursor: pointer;
 }
 
-.mobile-img {
+.mobile-img,
+.showcase .showcase-button {
   display: none;
 }
 

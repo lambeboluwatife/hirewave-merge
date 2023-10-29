@@ -2,10 +2,25 @@ import { Link } from "react-router-dom";
 import homeImage from "/home_image.webp";
 
 const Showcase = ({ showcase }) => {
+  const mainImage = (
+    <img src={homeImage} alt="showcase image" className="home-img" />
+  );
+
+  const employerImage = (
+    <img src={showcase.image} alt="showcase image" className="showcase-img" />
+  );
+
+  const mainImageMobile = (
+    <img src={homeImage} alt="showcase image" className="mobile-img" />
+  );
+
+  const employerImageMobile = (
+    <img src={showcase.image} alt="showcase image" className="mobile-img" />
+  );
   return (
     <div className="showcase">
       <div className="container">
-        <img src={homeImage} alt="showcase image" className="home-img" />
+        {showcase.image ? employerImage : mainImage}
 
         {showcase.svg && (
           <svg
@@ -96,6 +111,11 @@ const Showcase = ({ showcase }) => {
             </div>
             <button className="home-search-button">Search</button>
           </div>
+          <div className="showcase-button">
+            <Link to={showcase.link}>
+              <button className="btn">{showcase.button}</button>
+            </Link>
+          </div>
           <div className="candidates">
             <img
               className="ellipse-1"
@@ -133,7 +153,7 @@ const Showcase = ({ showcase }) => {
         </div>
         <div className="container">
           <center>
-            <img src={homeImage} alt="" className="mobile-img" />
+            {showcase.image ? employerImageMobile : mainImageMobile}
           </center>
         </div>
       </div>
