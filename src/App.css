@@ -12,7 +12,6 @@ header {
   align-items: center;
   padding: 15px 10%;
   height: 10vh;
-  /* background: #f4faff; */
 }
 
 .logo {
@@ -452,6 +451,7 @@ header .menu-bar {
 
 .about-us {
   text-align: center;
+  background-color: #fff;
 }
 
 .about-us h2 {
@@ -517,6 +517,10 @@ header .menu-bar {
 
 .about-btn .btn {
   margin-right: 1rem;
+}
+
+.featured-jobs {
+  background: #fff;
 }
 
 .featured-title {
@@ -624,8 +628,8 @@ header .menu-bar {
 }
 
 .services {
-  margin-top: 3rem;
   padding: 3rem;
+  background: #fff;
 }
 
 .services h2 {
@@ -686,10 +690,10 @@ header .menu-bar {
 }
 
 .faq {
-  margin-top: 3rem;
   display: grid;
   height: 100vh;
   place-items: center;
+  background: #fff;
 }
 
 .faq h1 {
@@ -699,6 +703,7 @@ header .menu-bar {
   font-weight: 600;
   line-height: normal;
   text-align: center;
+  margin-top: 3rem;
 }
 
 .faq h5 {
@@ -767,7 +772,7 @@ header .menu-bar {
 }
 
 .faq-jumbo {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   padding: 3rem;
   margin: 6rem 0 5rem 0;
 }
@@ -830,7 +835,7 @@ header .menu-bar {
 }
 
 footer {
-  background-color: var(--tertiary-color);
+  background-color: #1b1725;
   color: #ffffff;
 }
 
