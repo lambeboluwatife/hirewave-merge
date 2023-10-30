@@ -33,7 +33,7 @@ const Home = () => {
     text: "Need to discover top-tier talent for your business? Look no further. \nWe bridge the gap between fresh talent and thriving businesses.",
     button: "Explore Jobs",
     svg: true,
-    image: homeImage,
+    image: false,
     link: "/jobs",
   };
 
