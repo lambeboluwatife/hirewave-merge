@@ -32,7 +32,9 @@ const Header = ({ dropdown, toggleDropdown, loggedIn, userName }) => {
 
   return (
     <>
-      <header>
+      <header
+        className={`header ${location.pathname === "/" ? "lightblue" : ""}`}
+      >
         <h3 className="logo">
           <Link to="/">
             <svg

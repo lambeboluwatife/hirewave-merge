@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import homeImage from "/home_image.webp";
 
 const Showcase = ({ showcase }) => {
+  const location = useLocation();
+
   const mainImage = (
     <img src={homeImage} alt="showcase image" className="home-img" />
   );
@@ -18,7 +20,7 @@ const Showcase = ({ showcase }) => {
     <img src={showcase.image} alt="showcase image" className="mobile-img" />
   );
   return (
-    <div className="showcase">
+    <div className={`showcase ${location.pathname === "/" ? "lightblue" : ""}`}>
       <div className="container">
         {showcase.image ? employerImage : mainImage}
 
