@@ -8,7 +8,6 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
-  /* background: #f4faff; */
 }
 
 .container {
@@ -22,7 +21,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  justify-content: center;
   height: 100%;
 }
 
