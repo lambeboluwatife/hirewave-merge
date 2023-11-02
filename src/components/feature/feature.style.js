@@ -70,11 +70,11 @@ export const FilterSelect = styled.select`
   max-width: 320px;
   border: 0;
   color: #6d6d6d;
-  background-color: #f6fbff;
   border-radius: 10px;
+  background: var(--Accent, rgba(219, 219, 219, 0.26));
   padding: 15px 20px;
   margin-top: 38px;
-  font-family: Nunito;
+  font-family: "Nunito", san-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;
@@ -85,8 +85,8 @@ export const FilterText = styled.input`
   height: 57px;
   /* flex-shrink: 0; */
   max-width: 320px;
-  background-color: #f6fbff;
   border-radius: 10px;
+  background: var(--Accent, rgba(219, 219, 219, 0.26));
   padding: 15px 20px;
   outline: 0;
   border: 0;
