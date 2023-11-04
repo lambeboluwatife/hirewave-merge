@@ -156,21 +156,12 @@ form .checkbox span {
     padding: 10px;
   }
 
-  .sign-in-details {
-    width: 100%;
-  }
-
   .sign-in .logo {
     margin-left: 2rem;
   }
 
   form {
     margin-top: 2rem;
-  }
-
-  form input,
-  form button {
-    width: 100%;
   }
 
   form .checkbox,
@@ -201,8 +192,26 @@ form .checkbox span {
 
 /* Mobile */
 @media all and (max-width: 500px) {
+  .sign-in .container {
+    padding: 5px;
+  }
+
+  .sign-in .logo {
+    margin-top: 0;
+    margin-left: 1rem;
+    font-size: 20px;
+  }
+
+  .sign-in .logo svg {
+    padding-top: 0;
+  }
+
   .sign-in-details {
     padding: 1rem 0;
+  }
+
+  .sign-in-details h6 {
+    margin-top: 0;
   }
 
   form .input-box h6,
@@ -230,6 +239,10 @@ form .checkbox span {
 
 /* Mobile */
 @media all and (max-width: 400px) {
+  .sign-in-details h6 {
+    margin-right: 5rem;
+  }
+
   .sign-in-details form .input-box {
     margin: 0 1.5rem;
   }
@@ -238,9 +251,10 @@ form .checkbox span {
     margin: 0.5rem 1.5rem;
   }
 
-  /* .sign-in-details form .form-button {
-    width: 20rem;
-  } */
+  form input,
+  form button {
+    /* width: 300px; */
+  }
 }
 
 /* Mobile */

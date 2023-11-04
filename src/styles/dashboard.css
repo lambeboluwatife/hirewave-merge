@@ -6,6 +6,10 @@
   --tertiary-color: #090020;
 }
 
+.column.right .side-nav {
+  display: none;
+}
+
 .side-nav {
   background-color: var(--primary-color);
   padding: 20px;
@@ -68,8 +72,8 @@
 
 .menu {
   position: fixed;
-  color: #4d73f8;
-  top: 20px;
+  color: #1b1725;
+  top: 10px;
   right: 20px;
   cursor: pointer;
   display: none;
@@ -94,7 +98,8 @@
   margin-bottom: 1rem;
 }
 
-.dashboard .dashboard-header h2 {
+.dashboard .dashboard-header h2,
+.mobile-dashboard-header {
   color: #020c18;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -106,6 +111,11 @@
 .dashboard .dashboard-header .search-bar {
   position: relative;
   left: 18%;
+}
+
+.mobile-dashboard-header {
+  display: none;
+  margin-bottom: 1rem;
 }
 
 .job-seeker-dashboard .dashboard-header .search-bar {

@@ -43,7 +43,7 @@ const Feature = () => {
           </FilterSelect>
           <FilterText type="text" placeholder="Role" />
           <FilterSelect>
-            <option value="industry">Salarey Range</option>
+            <option value="industry">Salary Range</option>
           </FilterSelect>
           <FilterSelect>
             <option value="industry">Contract Type</option>

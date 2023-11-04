@@ -1,19 +1,27 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import SideNav from "../SideNav";
 import { dashboardData } from "../../data/services";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Dashboard = () => {
   useEffect(() => {
     document.title = "Hirewave | Employer's Dashboard";
   }, []);
+
+  const [showSideNav, setShowSideNav] = useState(false);
+
+  const toggleSideNav = () => {
+    setShowSideNav(!showSideNav);
+  };
+
   return (
     <>
       <div className="column left">
         <SideNav />
       </div>
       <div className="column right">
+        {showSideNav && <SideNav />}
         <div className="container">
           <div className="dashboard">
             <div className="dashboard-header">
@@ -63,9 +71,8 @@ const Dashboard = () => {
         </div>
         <FontAwesomeIcon
           className={`fa-2x menu`}
-          icon={faBars}
-          // icon={sideNav ? faRemove : faBars}
-          // onClick={toggleSideNav}
+          icon={showSideNav ? faTimes : faBars}
+          onClick={toggleSideNav}
         />
       </div>
     </>
