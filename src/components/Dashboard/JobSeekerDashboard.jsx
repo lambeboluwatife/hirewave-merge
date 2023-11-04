@@ -1,20 +1,30 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import SideNav from "../SideNav";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const JobSeekerDashboard = ({ userName }) => {
   useEffect(() => {
     document.title = "Hirewave | Job Seeker's Dashboard";
   }, []);
+
+  const [showSideNav, setShowSideNav] = useState(false);
+
+  const toggleSideNav = () => {
+    setShowSideNav(!showSideNav);
+  };
+
   return (
     <>
       <div className="column left">
         <SideNav />
       </div>
       <div className="column right">
+        {showSideNav && <SideNav />}
         <div className="container">
+          <h2 className="mobile-dashboard-header">Dashboard</h2>{" "}
           <div className="job-seeker-dashboard">
             <div className="dashboard-header">
-              {" "}
               <div className="search-bar">
                 <div>
                   <input
@@ -28,7 +38,8 @@ const JobSeekerDashboard = ({ userName }) => {
                 <img
                   style={{ width: "40px", marginLeft: "2rem" }}
                   src="/user.png"
-                  alt=""
+                  alt="user logo"
+                  className="user-dashboard-logo"
                 />
                 <h6>{userName}</h6>
                 <img className="dropdown" src="/dropdown.png" alt="" />
@@ -185,6 +196,11 @@ const JobSeekerDashboard = ({ userName }) => {
             </div>
           </div>
         </div>
+        <FontAwesomeIcon
+          className={`fa-2x menu`}
+          icon={showSideNav ? faTimes : faBars}
+          onClick={toggleSideNav}
+        />
       </div>
     </>
   );

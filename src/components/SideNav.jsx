@@ -1,11 +1,20 @@
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router-dom";
+import { useSpring, animated } from "@react-spring/web";
 
 const SideNav = () => {
+  const fadeIn = useSpring({
+    from: { opacity: 0, marginLeft: -1 },
+    to: { opacity: 1, marginLeft: 0 },
+    config: {
+      duration: 1000,
+    },
+  });
+
   const location = useLocation();
   return (
-    <div className="side-nav">
+    <animated.div className="side-nav">
       <h3 className="logo">
         <Link to="/">
           <svg
@@ -93,7 +102,7 @@ const SideNav = () => {
           </a>
         </li>
       </ul>
-    </div>
+    </animated.div>
   );
 };
 

@@ -71,7 +71,7 @@ export const DreamTitle = styled.h1`
 export const FieldContainer = styled.div`
   display: flex;
   border-radius: 10px;
-  background: #090020;
+  background-color: #1b1725;
   gap: 34px;
   flex-wrap: wrap;
   /* width: 100%; */
@@ -171,7 +171,7 @@ export const FieldButton = styled.button`
   border-radius: 10px;
   background: #4d73f8;
   transition: all 0.5s ease-in-out;
-  color: #000;
+  color: #fff;
   border: 0;
   outline: 0;
   /* align-self: center; */

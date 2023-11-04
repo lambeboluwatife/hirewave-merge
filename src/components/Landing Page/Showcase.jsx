@@ -56,68 +56,77 @@ const Showcase = ({ showcase }) => {
         <div className="showcase-content">
           <h1>{showcase.title}</h1>
           <h6>{showcase.text}</h6>
-          <div className="home-search">
-            <input type="search" name="home-search" className="search-input" />
-            <svg
-              className="home-search-svg"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M9.71429 15.4286C12.8702 15.4286 15.4286 12.8702 15.4286 9.71429C15.4286 6.55837 12.8702 4 9.71429 4C6.55837 4 4 6.55837 4 9.71429C4 12.8702 6.55837 15.4286 9.71429 15.4286Z"
-                stroke="#6D6D6D"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+
+          {location.pathname === "/" ? (
+            <div className="home-search">
+              <input
+                type="search"
+                name="home-search"
+                className="search-input"
               />
-              <path
-                d="M20.0812 20L13.7144 13.7143"
-                stroke="#6D6D6D"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <svg
-              className="home-search-svg2"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M12 21.1886L12.7211 20.376C13.5394 19.4389 14.2754 18.5497 14.9303 17.704L15.4708 16.9909C17.728 13.9497 18.8571 11.536 18.8571 9.752C18.8571 5.944 15.7874 2.85715 12 2.85715C8.21254 2.85715 5.14282 5.944 5.14282 9.752C5.14282 11.536 6.27197 13.9497 8.52911 16.9909L9.06968 17.704C10.0039 18.901 10.9813 20.0626 12 21.1886Z"
-                stroke="#6D6D6D"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M12 12.5714C13.5779 12.5714 14.8571 11.2922 14.8571 9.71429C14.8571 8.13633 13.5779 6.85715 12 6.85715C10.422 6.85715 9.14282 8.13633 9.14282 9.71429C9.14282 11.2922 10.422 12.5714 12 12.5714Z"
-                stroke="#6D6D6D"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <div className="line"></div>
-            <div className="home-search-placeholder">
-              <div>
-                <h6>Search job title or keyword</h6>
+              <svg
+                className="home-search-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M9.71429 15.4286C12.8702 15.4286 15.4286 12.8702 15.4286 9.71429C15.4286 6.55837 12.8702 4 9.71429 4C6.55837 4 4 6.55837 4 9.71429C4 12.8702 6.55837 15.4286 9.71429 15.4286Z"
+                  stroke="#6D6D6D"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M20.0812 20L13.7144 13.7143"
+                  stroke="#6D6D6D"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <svg
+                className="home-search-svg2"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M12 21.1886L12.7211 20.376C13.5394 19.4389 14.2754 18.5497 14.9303 17.704L15.4708 16.9909C17.728 13.9497 18.8571 11.536 18.8571 9.752C18.8571 5.944 15.7874 2.85715 12 2.85715C8.21254 2.85715 5.14282 5.944 5.14282 9.752C5.14282 11.536 6.27197 13.9497 8.52911 16.9909L9.06968 17.704C10.0039 18.901 10.9813 20.0626 12 21.1886Z"
+                  stroke="#6D6D6D"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 12.5714C13.5779 12.5714 14.8571 11.2922 14.8571 9.71429C14.8571 8.13633 13.5779 6.85715 12 6.85715C10.422 6.85715 9.14282 8.13633 9.14282 9.71429C9.14282 11.2922 10.422 12.5714 12 12.5714Z"
+                  stroke="#6D6D6D"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <div className="line"></div>
+              <div className="home-search-placeholder">
+                <div>
+                  <h6>Search job title or keyword</h6>
+                </div>
+                <div>
+                  <h6 className="home-search-placeholder2">Location</h6>
+                </div>
               </div>
-              <div>
-                <h6 className="home-search-placeholder2">Location</h6>
-              </div>
+              <button className="home-search-button">Search</button>
             </div>
-            <button className="home-search-button">Search</button>
-          </div>
-          <div className="showcase-button">
-            <Link to={showcase.link}>
-              <button className="btn">{showcase.button}</button>
-            </Link>
-          </div>
+          ) : (
+            <div className="showcase-button">
+              <Link to={showcase.link}>
+                <button className="btn">{showcase.button}</button>
+              </Link>
+            </div>
+          )}
+
           <div className="candidates">
             <img
               className="ellipse-1"

@@ -46,10 +46,56 @@
     bottom: 77%;
     margin-left: 10%;
   }
+
+  .grid,
+  .job-seeker-dashboard .cards .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .job-seeker-dashboard .dashboard-header .search-bar input[type="search"] {
+    width: 300px;
+    height: 35px;
+    margin-right: 4rem;
+  }
+
+  .job-seeker-dashboard .dashboard-header .search-bar img {
+    right: 20%;
+  }
+
+  .job-seeker-dashboard .cards .grid > *:nth-child(2) {
+    height: 16rem;
+    width: 100%;
+    grid-column: 1 / span 2;
+  }
+
+  .job-seeker-dashboard .cards .grid > *:nth-child(3) {
+    position: static;
+    width: 100%;
+  }
+
+  .job-seeker-dashboard .cards .card.card2 hr {
+    width: 100%;
+  }
+
+  .job-seeker-dashboard .cards .card.card2 ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Mobile */
 @media all and (max-width: 500px) {
+  .column.right .side-nav {
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    transition: 0.5s;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+  }
+
   .grid,
   .dashboard .cards .grid {
     grid-template-columns: 1fr;
@@ -67,6 +113,18 @@
   .right {
     width: 100%;
     margin-left: 0;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .premium {
+    right: 4%;
+  }
+
+  .side-nav ul li {
+    padding: 0.2rem;
   }
 
   .column.right .container {
@@ -115,6 +173,28 @@
   .dashboard .cards .card.card3 h5 {
     font-size: 10px;
   }
+
+  .job-seeker-dashboard .dashboard-header .search-bar input[type="search"] {
+    width: 300px;
+    height: 35px;
+    margin-right: 2rem;
+  }
+
+  .user-dashboard-logo {
+    display: none;
+  }
+
+  .job-seeker-dashboard .dropdown {
+    display: none;
+  }
+
+  .job-seeker-dashboard .dashboard-header .search-bar img {
+    right: 11%;
+  }
+
+  .mobile-dashboard-header {
+    display: block;
+  }
 }
 
 /* Mobile */
@@ -127,10 +207,26 @@
     width: 180px;
     height: 20px;
   }
+
+  .job-seeker-dashboard .dashboard-header .search-bar input[type="search"] {
+    margin-right: 0;
+  }
+
+  .job-seeker-dashboard .dashboard-header .search-bar img {
+    right: 2%;
+  }
+
+  .premium {
+    right: 12.5%;
+  }
 }
 
 /* Mobile */
 @media all and (max-width: 320px) {
+  .column.right .side-nav {
+    width: 60%;
+  }
+
   .grid,
   .dashboard .cards .grid {
     grid-template-columns: 1fr;
@@ -140,5 +236,21 @@
   .dashboard .dashboard-header .search-bar input[type="search"] {
     width: 120px;
     height: 20px;
+  }
+
+  .mobile-dashboard-header {
+    margin-bottom: 0;
+  }
+
+  .job-seeker-dashboard .dashboard-header .search-bar input[type="search"] {
+    display: none;
+  }
+
+  .job-seeker-dashboard .dashboard-header .search-bar img {
+    display: none;
+  }
+
+  .job-seeker-dashboard .dashboard-header .notification-img {
+    display: none;
   }
 }
