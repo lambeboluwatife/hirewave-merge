@@ -1,6 +1,8 @@
-import { useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import moment from "moment/moment";
 import Notifications from "../Notifications";
+
+import { useDropzone } from "react-dropzone";
 
 const PostJob = ({ postJob, loggedIn }) => {
   const [jobPosition, setJobPosition] = useState("");
@@ -12,7 +14,7 @@ const PostJob = ({ postJob, loggedIn }) => {
   const [aboutCandidate, setAboutCandidate] = useState("");
   const [compensations, setCompensations] = useState("");
   const [companyName, setCompanyName] = useState("");
-  const [logo, setLogo] = useState("");
+  const [logo, setLogo] = useState(null);
   const [aboutCompany, setAboutCompany] = useState("");
   const [recruiting, setRecruiting] = useState(false);
   const postedAt = moment().format("MMM D, YYYY");
@@ -20,6 +22,18 @@ const PostJob = ({ postJob, loggedIn }) => {
   const [showNotification, setShowNotification] = useState(false);
   const [notificationText, setNotificationText] = useState("");
   const [notificationType, setNotificationType] = useState("");
+
+  const onDrop = useCallback((acceptedFiles) => {
+    if (acceptedFiles.length > 0) {
+      const imageURL = URL.createObjectURL(acceptedFiles[0]);
+      setLogo(imageURL);
+    }
+  }, []);
+
+  const { getRootProps, getInputProps } = useDropzone({
+    accept: "image/*",
+    onDrop,
+  });
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -273,16 +287,13 @@ const PostJob = ({ postJob, loggedIn }) => {
                   onChange={(e) => setCompanyName(e.target.value)}
                 />
               </div>
-              <div className="input-box">
-                <h4>
-                  Upload Company Logo <sup>&#42;</sup>
-                </h4>
-                <input
-                  type="file"
-                  name="logo"
-                  value={logo}
-                  onChange={(e) => setLogo(e.target.value)}
-                />
+              <div className="input-box upload">
+                <div {...getRootProps()} className="dropzone">
+                  <input {...getInputProps()} />
+                  <h4>
+                    Upload Company Logo <sup>&#42;</sup>
+                  </h4>
+                </div>
               </div>
             </div>
             <div className="input-box">

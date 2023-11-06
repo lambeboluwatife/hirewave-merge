@@ -331,7 +331,8 @@
 }
 
 input,
-textarea {
+textarea,
+.input-box .dropzone {
   padding: 15px;
   border-radius: 10px;
   border: 1px solid rgba(52, 6, 179, 0.1);
@@ -339,6 +340,12 @@ textarea {
   font-family: "Nunito", sans-serif;
   width: 450px;
   height: 56px;
+}
+
+.input-box .dropzone {
+  margin-top: 2.5rem;
+  height: 56px;
+  padding: 0 1rem;
 }
 
 input:focus,

@@ -44,18 +44,13 @@ form .input-box h6 {
   font-weight: 400;
   line-height: normal;
   text-align: left;
-  margin-left: 1.5rem;
 }
 
-form input {
+.sign-in form input {
   border-radius: 10px;
   border: 0.5px solid rgba(77, 115, 248, 0.56);
-  width: 400px;
+  width: 100%;
   height: 50px;
-}
-
-form .checkbox {
-  margin-left: 1.5rem;
 }
 
 form .checkbox span {
@@ -77,7 +72,7 @@ form .checkbox span {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 400px;
+  width: 100%;
   height: 50px;
   border: none;
   margin-top: 2rem;
@@ -164,9 +159,8 @@ form .checkbox span {
     margin-top: 2rem;
   }
 
-  form .checkbox,
-  form .input-box h6 {
-    margin-left: 0;
+  form input {
+    margin-bottom: 1rem;
   }
 
   .content-container {
@@ -219,6 +213,14 @@ form .checkbox span {
     font-size: 10px;
   }
 
+  form .checkbox span {
+    padding-bottom: 1rem;
+  }
+
+  form .input-box h6 {
+    padding-bottom: 0.2rem;
+  }
+
   input[type="checkbox"] {
     width: 15px;
   }
@@ -234,26 +236,6 @@ form .checkbox span {
 
   .content-container {
     margin: 3rem 0;
-  }
-}
-
-/* Mobile */
-@media all and (max-width: 400px) {
-  .sign-in-details h6 {
-    margin-right: 5rem;
-  }
-
-  .sign-in-details form .input-box {
-    margin: 0 1.5rem;
-  }
-
-  .sign-in-details form .checkbox {
-    margin: 0.5rem 1.5rem;
-  }
-
-  form input,
-  form button {
-    /* width: 300px; */
   }
 }
 

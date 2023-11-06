@@ -4,14 +4,14 @@ import { Pagination } from "@mui/material";
 import { Wrapper } from "../components/feature/feature.style";
 import { useEffect } from "react";
 
-const Jobs = () => {
+const Jobs = ({ createdJobs }) => {
   useEffect(() => {
     document.title = "Hirewave | Jobs Page";
   }, []);
   return (
     <>
       <Dream />
-      <Feature />
+      <Feature createdJobs={createdJobs} />
       <Wrapper>
         <Pagination count={10} shape="rounded" />
       </Wrapper>

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation } from "react-router-dom";
 
-const Header = ({ dropdown, toggleDropdown, loggedIn, userName }) => {
+const Header = ({ dropdown, toggleDropdown, loggedIn, currentUser }) => {
   const location = useLocation();
   const hideHeaderForPaths = [
     "/sign-in",
@@ -29,6 +29,8 @@ const Header = ({ dropdown, toggleDropdown, loggedIn, userName }) => {
     setShowModal(!showModal);
     setModalContent(signUpModalContent);
   };
+
+  // const firstName = currentUser.name.split(" ")[0];
 
   return (
     <>
@@ -83,11 +85,19 @@ const Header = ({ dropdown, toggleDropdown, loggedIn, userName }) => {
         <div className="header-btn">
           {loggedIn ? (
             <div className="loggedUser">
-              <FontAwesomeIcon
-                icon={faUser}
-                style={{ paddingRight: "0.5rem" }}
-              />
-              {`Signed In as ${userName}`}
+              <Link
+                to={
+                  currentUser.type === "employer"
+                    ? "/employer/dashboard"
+                    : "/job-seeker/dashboard"
+                }
+              >
+                <FontAwesomeIcon
+                  icon={faUser}
+                  style={{ paddingRight: "0.5rem" }}
+                />
+                {`${currentUser.name}`}
+              </Link>
             </div>
           ) : (
             <>
