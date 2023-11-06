@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import "./App.css";
@@ -35,10 +35,12 @@ const App = () => {
   const [notificationType, setNotificationType] = useState("");
 
   const [loggedIn, setLoggedIn] = useState(false);
-  const [userName, setUserName] = useState("");
+  const [currentUser, setCurrentUser] = useState({});
 
   const [dropdown, setDropdown] = useState(false);
   const [showModal, setShowModal] = useState(false);
+
+  const [createdJobs, setCreatedJobs] = useState([]);
 
   const toggleDropdown = () => {
     setDropdown(!dropdown);
@@ -48,7 +50,11 @@ const App = () => {
     setShowModal(!showModal);
   };
 
-  const jobs = useLiveQuery(() => db.jobs.toArray());
+  const jobsFromDB = useLiveQuery(() => db.jobs.reverse().toArray(), []);
+
+  useEffect(() => {
+    setCreatedJobs(jobsFromDB);
+  }, [jobsFromDB]);
 
   const logUser = async (user) => {
     const { email, password } = user;
@@ -58,10 +64,9 @@ const App = () => {
 
     users.find((user) => {
       if (user.email === email && user.password === password) {
-        const firstName = user.name.split(" ")[0];
         setShowNotification(!showNotification);
         setLoggedIn(!loggedIn);
-        setUserName(`${firstName}`);
+        setCurrentUser(user);
         setNotificationText(`Signed In as ${user.name}`);
         setNotificationType("success");
         if (user.type === "job seeker") {
@@ -165,7 +170,7 @@ const App = () => {
         dropdown={dropdown}
         toggleDropdown={toggleDropdown}
         loggedIn={loggedIn}
-        userName={userName}
+        currentUser={currentUser}
       />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -174,7 +179,7 @@ const App = () => {
           element={<Employers postJob={postJob} loggedIn={loggedIn} />}
         />
         <Route path="/resources" element={<Resource />} />
-        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/jobs" element={<Jobs createdJobs={createdJobs} />} />
         <Route path="/support" element={<Support />} />
         <Route path="/sign-in" element={<SignIn onLogin={logUser} />} />
         <Route path="/sign-up" element={<SignUp onAdd={addUser} />} />
@@ -192,7 +197,7 @@ const App = () => {
         <Route path="/employer/dashboard" element={<Dashboard />} />
         <Route
           path="/job-seeker/dashboard"
-          element={<JobSeekerDashboard userName={userName} />}
+          element={<JobSeekerDashboard currentUser={currentUser} />}
         />
 
         <Route path="*" element={<NotFound />} />

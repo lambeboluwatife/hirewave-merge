@@ -185,11 +185,11 @@ const JobSeekerDashboard = ({ userName }) => {
             <div className="cards2">
               <div className="grid">
                 <div className="card">
-                  <h4>Recommended Jobs</h4>
+                  <h4>My Learning</h4>
                   <h5>You Have None Yet.</h5>
                 </div>
                 <div className="card">
-                  <h4>Recommended Jobs</h4>
+                  <h4>Community Updates</h4>
                   <h5>You Have None Yet.</h5>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router-dom";
 import { useSpring, animated } from "@react-spring/web";
@@ -45,10 +45,24 @@ const SideNav = () => {
         </Link>
       </h3>
       <div className="button">
-        <button>
-          <FontAwesomeIcon icon={faPlus} style={{ paddingRight: "10px" }} />
-          Post a job
-        </button>
+        {location.pathname === "/employer/dashboard" ? (
+          <Link to="/employers">
+            <button>
+              <FontAwesomeIcon icon={faPlus} style={{ paddingRight: "10px" }} />
+              Post a job
+            </button>
+          </Link>
+        ) : (
+          <Link to="/jobs">
+            <button>
+              <FontAwesomeIcon
+                icon={faSearch}
+                style={{ paddingRight: "10px" }}
+              />
+              Find job
+            </button>
+          </Link>
+        )}
       </div>
       <hr className="line" />
       <ul>
