@@ -14,6 +14,7 @@ const Header = ({ dropdown, toggleDropdown, loggedIn, currentUser }) => {
     "/candidates",
     "/settings",
     "/job-seeker/dashboard",
+    "/jobs/:id",
   ];
 
   if (hideHeaderForPaths.includes(location.pathname)) {

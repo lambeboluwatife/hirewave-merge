@@ -26,6 +26,7 @@ import SignUpModal from "./components/AuthPages/SignUpModal";
 import SignInModal from "./components/AuthPages/SignInModal";
 import Dashboard from "./components/Dashboard/Dashboard";
 import JobSeekerDashboard from "./components/Dashboard/JobSeekerDashboard";
+import JobDetails from "./components/JobDetails";
 
 const App = () => {
   const navigate = useNavigate();
@@ -110,7 +111,9 @@ const App = () => {
 
     if (existingJob) {
       setShowNotification(!showNotification);
-      setNotificationText(`${email} already registered`);
+      setNotificationText(
+        `There's already a job vacancy for ${jobPosition} in ${companyName}`
+      );
       setNotificationType("error");
     } else {
       // add new job
@@ -132,6 +135,7 @@ const App = () => {
       setShowNotification(!showNotification);
       setNotificationText("Job Posted");
       setNotificationType("success");
+      navigate("/jobs", { replace: true });
     }
   };
 
@@ -199,6 +203,8 @@ const App = () => {
           path="/job-seeker/dashboard"
           element={<JobSeekerDashboard currentUser={currentUser} />}
         />
+
+        <Route path="/jobs/:id" element={<JobDetails />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

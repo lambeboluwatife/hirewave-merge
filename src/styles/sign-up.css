@@ -53,6 +53,10 @@ form .input-box h6 {
   height: 50px;
 }
 
+.sign-in form input[type="checkbox"] {
+  /* width: rem; */
+}
+
 form .checkbox span {
   color: #6d6d6d;
   font-family: "Nunito", sans-serif;
@@ -159,7 +163,7 @@ form .checkbox span {
     margin-top: 2rem;
   }
 
-  form input {
+  .sign-in form input {
     margin-bottom: 1rem;
   }
 

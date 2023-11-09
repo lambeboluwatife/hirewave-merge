@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
-  const hideHeaderForPaths = [
+  const hideFooterForPaths = [
     "/sign-in",
     "/sign-up",
     "/employer/sign-in",
@@ -11,9 +11,10 @@ const Footer = () => {
     "/candidates",
     "/settings",
     "/job-seeker/dashboard",
+    "/jobs/:id",
   ];
 
-  if (hideHeaderForPaths.includes(location.pathname)) {
+  if (hideFooterForPaths.includes(location.pathname)) {
     return <></>;
   }
 

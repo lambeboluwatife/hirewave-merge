@@ -10,6 +10,7 @@ import "./styles/responsiveness/employers.css";
 import "./styles/responsiveness/notFound.css";
 import "./styles/dashboard.css";
 import "./styles/responsiveness/dashboard.css";
+import "./styles/job-details.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
