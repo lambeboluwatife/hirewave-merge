@@ -1,5 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
+
+import {
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaLinkedinIn,
+  FaClipboardList,
+} from "react-icons/fa";
 
 import { db } from "../dexie";
 import Loading from "./Loading";
@@ -22,16 +29,20 @@ const JobDetails = () => {
   ) : (
     <div className="job-details">
       <div className="job-details-header">
-        <div className="container">
-          <h1>{job.jobPosition}</h1>
-          <span>at</span> <h1 className="job-position">{job.companyName}</h1>
-          <div className="company-info">
-            <h6>{job.aboutCompany}</h6>
+        <div className="container grid">
+          <div>
+            {" "}
+            <h1>{job.jobPosition}</h1>
+            <span>at</span> <h1 className="job-position">{job.companyName}</h1>
+            <div className="company-info">
+              <h6>{job.aboutCompany}</h6>
+            </div>
+            <div className="job-details-header-btn">
+              <button>VIEW COMPANY</button>
+              <button>APPLY FOR THIS JOB</button>
+            </div>
           </div>
-          <div className="job-details-header-btn">
-            <button>VIEW COMPANY</button>
-            <button>APPLY FOR THIS JOB</button>
-          </div>
+          <div></div>
         </div>
       </div>
       <div className="job-content">
@@ -76,7 +87,30 @@ const JobDetails = () => {
               </div>
             </div>
             <div className="share-job">
-              <div className="container">Share Job</div>
+              <div className="container">
+                <div className="share-links">
+                  <div className="share-box">
+                    <FaClipboardList className="fa" />
+                    Apply for this job
+                  </div>
+                  <div className="share-box social">
+                    <FaFacebookSquare className="fa" />
+                    Share on Facebook
+                  </div>
+                  <div className="share-box social">
+                    <FaTwitterSquare className="fa" />
+                    Share on Twitter
+                  </div>
+                  <div className="share-box social">
+                    <FaLinkedinIn className="fa" />
+                    Share on LinkedIn
+                  </div>
+                </div>
+                <div className="company-info2">
+                  <h4>{job.companyName}</h4>
+                  <h6>{job.aboutCompany}</h6>
+                </div>
+              </div>
             </div>
           </div>
         </div>
