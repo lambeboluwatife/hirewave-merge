@@ -13,6 +13,10 @@
     font-size: 20px;
   }
 
+  header.lightblue {
+    background: #f4faff;
+  }
+
   nav {
     display: none;
   }
@@ -51,9 +55,7 @@
   }
 
   .showcase .main-svg {
-    top: 12rem;
-    left: 21rem;
-    transform: scale(0.7) rotate(47deg);
+    display: none;
   }
 
   .showcase-content {
@@ -79,24 +81,24 @@
   }
 
   .showcase .home-search .home-search-svg2 {
-    left: 27.5%;
+    left: 50%;
   }
 
   .showcase .home-search .home-search-placeholder {
-    left: 4%;
+    left: 6.5%;
     top: -18%;
   }
 
   .showcase .home-search .home-search-placeholder2 {
-    margin-left: 2.3rem;
+    margin-left: 2.7rem;
   }
 
   .showcase .home-search .line {
-    left: 27%;
+    left: 48%;
   }
 
   .showcase .home-search .home-search-button {
-    left: 40%;
+    left: 71%;
     top: -43%;
     padding: 6px 25px;
   }
@@ -107,32 +109,32 @@
   }
 
   .candidates .ellipse-2 {
-    left: 6%;
+    left: 10%;
   }
 
   .candidates .ellipse-3 {
-    left: 12%;
+    left: 20%;
   }
 
   .candidates .ellipse-4 {
-    left: 18%;
+    left: 30%;
   }
 
   .candidates .ellipse-5 {
-    left: 24%;
+    left: 40%;
   }
 
   .candidates .ellipse-6 {
-    left: 29%;
+    left: 50%;
   }
 
   .candidates h5 {
-    left: 30.5%;
+    left: 53%;
     top: 30%;
   }
 
   .candidates h6 {
-    left: 39%;
+    left: 70%;
     margin-top: 0;
   }
 
