@@ -30,13 +30,15 @@
 
   .showcase {
     height: 80vh;
+    background-image: none;
+    background-color: #f4faff;
   }
 
   .showcase-img {
     display: flex;
     position: absolute;
     z-index: -1;
-    left: 14.3rem;
+    left: 16.2rem;
     height: 100vh;
     width: 70vh;
     bottom: 1px;
@@ -77,7 +79,7 @@
   }
 
   .showcase .home-search .home-search-svg2 {
-    left: 26%;
+    left: 27.5%;
   }
 
   .showcase .home-search .home-search-placeholder {
@@ -90,11 +92,11 @@
   }
 
   .showcase .home-search .line {
-    left: 25.5%;
+    left: 27%;
   }
 
   .showcase .home-search .home-search-button {
-    left: 38%;
+    left: 40%;
     top: -43%;
     padding: 6px 25px;
   }
@@ -130,7 +132,7 @@
   }
 
   .candidates h6 {
-    left: 38%;
+    left: 39%;
     margin-top: 0;
   }
 
@@ -207,17 +209,26 @@
   }
 
   .faq-item {
-    width: 42rem;
+    width: 40rem;
   }
 
   .faq-jumbo {
     padding: 3rem 0;
     margin: 0 0 5rem 0;
   }
+
+  footer .grid > *:first-child {
+    grid-column: 1 / span 2;
+    text-align: center;
+  }
 }
 
 /* Mobile */
 @media all and (max-width: 500px) {
+  .container {
+    padding: 0 40px;
+  }
+
   header {
     padding: 2rem 2rem;
   }
@@ -295,50 +306,14 @@
 
   .mobile-img {
     display: block;
-    width: 100%;
+    margin-top: 2rem;
+    width: 300px;
+    height: 300px;
+    margin-right: 1rem;
   }
 
   .candidates {
-    margin: 30px 0 30px 0;
-  }
-
-  .candidates img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .candidates .ellipse-2 {
-    left: 8%;
-  }
-
-  .candidates .ellipse-3 {
-    left: 16%;
-  }
-
-  .candidates .ellipse-4 {
-    left: 24%;
-  }
-
-  .candidates .ellipse-5 {
-    left: 32%;
-  }
-
-  .candidates .ellipse-6 {
-    left: 40%;
-  }
-
-  .candidates h5 {
-    left: 42%;
-    top: 25%;
-    font-size: 15px;
-  }
-
-  .candidates h6 {
-    left: 54%;
-    top: 25%;
-    font-size: 15px;
-    margin-top: 0;
-    color: #090020;
+    display: none;
   }
 
   .jumbotron {
@@ -726,6 +701,8 @@
 
   .mobile-img {
     margin-top: 1rem;
+    width: 200px;
+    height: 200px;
   }
 
   .jumbotron {

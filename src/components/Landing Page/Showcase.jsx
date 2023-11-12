@@ -22,7 +22,7 @@ const Showcase = ({ showcase }) => {
   return (
     <div className={`showcase ${location.pathname === "/" ? "lightblue" : ""}`}>
       <div className="container">
-        {showcase.image ? employerImage : mainImage}
+        {/* {showcase.image ? employerImage : mainImage} */}
 
         {showcase.svg && (
           <svg
