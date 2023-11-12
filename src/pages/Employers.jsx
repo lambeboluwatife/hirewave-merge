@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Showcase from "../components/Landing Page/Showcase";
+import Hero from "../components/Employers Page/Hero";
 import EmployersJumbotron from "../components/Employers Page/EmployersJumbotron";
 import HiringExperience from "../components/Employers Page/HiringExperience";
 import Note from "../components/Employers Page/Note";
@@ -26,7 +26,7 @@ const Employers = ({ postJob, loggedIn }) => {
 
   return (
     <>
-      <Showcase showcase={employersShowcase} />
+      <Hero showcase={employersShowcase} />
       <EmployersJumbotron cards={cards} />
       <HiringExperience data={experienceData} />
       <Note />

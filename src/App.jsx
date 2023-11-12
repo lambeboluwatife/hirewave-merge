@@ -132,10 +132,10 @@ const App = () => {
         recruiting,
         postedAt,
       });
+      navigate("/jobs", { replace: true });
       setShowNotification(!showNotification);
       setNotificationText("Job Posted");
       setNotificationType("success");
-      navigate("/jobs", { replace: true });
     }
   };
 

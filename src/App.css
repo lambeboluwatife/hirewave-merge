@@ -235,8 +235,8 @@ header.lightblue {
 .showcase svg {
   position: absolute;
   z-index: 3;
-  top: 16rem;
-  left: 33rem;
+  top: 15rem;
+  left: 36rem;
 }
 
 .showcase-img {
@@ -928,4 +928,28 @@ hr {
   font-weight: 400;
   line-height: 150%;
   padding-bottom: 20px;
+}
+
+@media all and (max-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .container {
+    max-width: 962px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    max-width: 738px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .container {
+    max-width: 546px;
+  }
 }
