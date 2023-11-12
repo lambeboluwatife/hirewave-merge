@@ -60,6 +60,7 @@
 
   .showcase-content {
     padding-top: 0.5rem;
+    width: 100%;
   }
 
   .showcase-content h1 {
@@ -106,6 +107,10 @@
   .showcase-content button {
     height: 2.5rem;
     margin-top: 2rem;
+  }
+
+  .candidates {
+    display: none;
   }
 
   .candidates .ellipse-2 {
@@ -308,7 +313,7 @@
 
   .mobile-img {
     display: block;
-    margin-top: 2rem;
+    margin-top: 4rem;
     width: 300px;
     height: 300px;
     margin-right: 1rem;

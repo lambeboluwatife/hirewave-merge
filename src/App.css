@@ -193,11 +193,12 @@ header .menu-bar {
 }
 
 .showcase {
-  height: 90vh;
+  /* height: 90vh; */
   background-image: url("/public/home_image.webp");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 40%;
   background-position: right;
+  background-position-y: 2rem;
 }
 
 .showcase-content {
