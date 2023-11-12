@@ -10,7 +10,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 10%;
+  padding: 15px 60px;
   height: 10vh;
 }
 
@@ -194,9 +194,12 @@ header .menu-bar {
 
 .showcase {
   height: 90vh;
+  background-image: url("/public/home_image.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }
 
-.showcase.lightblue,
 header.lightblue {
   background: #f4faff;
 }
@@ -236,14 +239,14 @@ header.lightblue {
   position: absolute;
   z-index: 3;
   top: 15rem;
-  left: 36rem;
+  left: 30rem;
 }
 
 .showcase-img {
   display: flex;
   position: absolute;
   z-index: -1;
-  left: 49rem;
+  left: 50.5rem;
   height: 100vh;
   bottom: 1px;
 }
@@ -252,7 +255,7 @@ header.lightblue {
   position: absolute;
   z-index: 1;
   width: 45%;
-  left: 40rem;
+  left: 42rem;
 }
 
 .showcase .home-search {
@@ -275,7 +278,7 @@ header.lightblue {
 
 .showcase .home-search .home-search-svg2 {
   position: absolute;
-  left: 20%;
+  left: 18%;
   top: 32%;
 }
 
@@ -290,7 +293,7 @@ header.lightblue {
 }
 
 .showcase .home-search .home-search-placeholder2 {
-  margin-left: 4rem;
+  margin-left: 3.5rem;
 }
 
 .showcase .home-search .line {
@@ -299,7 +302,7 @@ header.lightblue {
   background: #6d6d6d;
   position: absolute;
   z-index: 2;
-  left: 19%;
+  left: 17%;
   top: 22%;
 }
 
@@ -322,7 +325,7 @@ header.lightblue {
   height: 2.5rem;
   position: absolute;
   z-index: 3;
-  left: 33%;
+  left: 29%;
   top: 15%;
   cursor: pointer;
 }
@@ -928,28 +931,4 @@ hr {
   font-weight: 400;
   line-height: 150%;
   padding-bottom: 20px;
-}
-
-@media all and (max-width: 1200px) {
-  .container {
-    max-width: 1170px;
-  }
-}
-
-@media all and (max-width: 992px) {
-  .container {
-    max-width: 962px;
-  }
-}
-
-@media all and (max-width: 768px) {
-  .container {
-    max-width: 738px;
-  }
-}
-
-@media all and (max-width: 576px) {
-  .container {
-    max-width: 546px;
-  }
 }

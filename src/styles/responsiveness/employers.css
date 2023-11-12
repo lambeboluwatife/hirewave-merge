@@ -14,6 +14,10 @@
     left: 12rem;
   }
 
+  .hiring-experience .container {
+    padding: 0 40px;
+  }
+
   .hiring-experience {
     margin-top: 70rem;
   }
