@@ -127,7 +127,7 @@ const EmployerSignIn = ({ onLogin }) => {
                   </h6>
                   <h6>Take the first step towards building your dream team!</h6>
 
-                  <h4>Already have an account?</h4>
+                  <h4>No Account Yet?</h4>
                   <div className="link">
                     <h3>
                       <Link to="/employer/sign-up">Sign up</Link>

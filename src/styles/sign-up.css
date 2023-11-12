@@ -16,12 +16,12 @@
 }
 
 .sign-in .logo svg {
-  width: 30px;
-  padding-top: 0.5rem;
+  width: 35px;
+  padding-right: 0.5rem;
 }
 
 .sign-in-details {
-  padding: 2rem 1rem;
+  padding: 0 1rem;
   text-align: center;
 }
 
@@ -54,7 +54,7 @@ form .input-box h6 {
 }
 
 .sign-in form input[type="checkbox"] {
-  /* width: rem; */
+  width: 1rem;
 }
 
 form .checkbox span {
@@ -159,7 +159,7 @@ form .checkbox span {
     margin-left: 2rem;
   }
 
-  form {
+  .sign-in form {
     margin-top: 2rem;
   }
 

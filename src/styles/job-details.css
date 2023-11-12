@@ -1,3 +1,7 @@
+.job-details {
+  margin-bottom: 2rem;
+}
+
 .job-details-header {
   background: #4d73f8;
   /* height: 40vh; */
@@ -67,7 +71,7 @@
 
 .job-details .job-info .icon-box {
   width: 10%;
-  height: 2%;
+  height: 10%;
   position: relative;
 }
 

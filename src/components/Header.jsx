@@ -141,7 +141,7 @@ const Header = ({ dropdown, toggleDropdown, loggedIn, currentUser }) => {
                 icon={faUser}
                 style={{ paddingRight: "0.5rem" }}
               />
-              {`Signed In as ${userName}`}
+              {`Signed In as ${currentUser.name}`}
             </div>
           ) : (
             <>

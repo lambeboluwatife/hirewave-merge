@@ -129,7 +129,7 @@ const SignIn = ({ onLogin }) => {
                     first step together.
                   </h6>
 
-                  <h4>Already have an account?</h4>
+                  <h4>No Account Yet?</h4>
                   <div className="link">
                     <h3>
                       <Link to="/sign-up">Sign up</Link>
