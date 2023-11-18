@@ -38,6 +38,10 @@
     background-color: #f4faff;
   }
 
+  .showcase.home {
+    background-image: none;
+  }
+
   .showcase-img {
     display: flex;
     position: absolute;
@@ -52,6 +56,9 @@
     width: 50%;
     left: 25rem;
     top: 15%;
+  }
+  .showcase-img {
+    display: none;
   }
 
   .showcase .main-svg {
