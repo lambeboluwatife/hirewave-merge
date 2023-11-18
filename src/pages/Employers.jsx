@@ -19,7 +19,6 @@ const Employers = ({ postJob, loggedIn }) => {
     title: "Connecting Talent \nWith Opportunity",
     text: "We’ve made hiring effortless with just few clicks! \nCheck it out!",
     button: "Post A Job",
-    svg: false,
     image: employersImage,
     link: "/post-jobs",
   };

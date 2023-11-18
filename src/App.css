@@ -193,12 +193,14 @@ header .menu-bar {
 }
 
 .showcase {
-  /* height: 90vh; */
-  background-image: url("/public/home_image.webp");
+  height: 90vh;
+}
+
+.showcase.home {
+  background-image: url("/home_image.webp");
   background-repeat: no-repeat;
-  background-size: 40%;
+  background-size: contain;
   background-position: right;
-  background-position-y: 2rem;
 }
 
 .showcase-content {
@@ -323,7 +325,7 @@ header .menu-bar {
   height: 2.5rem;
   position: absolute;
   z-index: 3;
-  left: 75%;
+  left: 74%;
   top: 15%;
   cursor: pointer;
 }

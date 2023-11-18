@@ -46,9 +46,9 @@ const Home = () => {
     <>
       <Showcase showcase={homeShowcase} />
       <Jumbotron />
-      <About />
-      <Services services={services} />
       <FeaturedJobs jobs={jobs} />
+      <Services services={services} />
+      <About />
       <FAQ
         faqContent={faqContent}
         toggle={toggle}
